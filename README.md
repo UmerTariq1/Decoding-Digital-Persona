@@ -48,11 +48,7 @@ An intelligent tool that analyzes your digital presence to predict your online p
 - `data/personas/`: Persona definitions and assets
 
 ## Requirements
-- Python 3.7+
+- Python 3.11
 - OpenAI API key (for GPT analysis)
 - spaCy with English language model
 - Streamlit
-
-## Next Steps
-- Integrate LLM for smarter explanations
-- Add more personas and features 
