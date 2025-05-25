@@ -191,3 +191,746 @@ Reasoning: You clearly love exploring new places and sharing your experiences wi
 2025-05-25 19:27:48 - DEBUG - Popen(['git', 'diff', '--abbrev=40', '--full-index', '-M', '--raw', '-z', '--no-color'], cwd=/Users/umer/Desktop/a .nosync/personal projects/era company/decoding_digital_persona, stdin=None, shell=False, universal_newlines=False)
 2025-05-25 19:27:48 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/Users/umer/Desktop/a .nosync/personal projects/era company/decoding_digital_persona, stdin=<valid stream>, shell=False, universal_newlines=False)
 2025-05-25 19:27:48 - DEBUG - Popen(['git', 'rev-list', 'origin/main..main', '--'], cwd=/Users/umer/Desktop/a .nosync/personal projects/era company/decoding_digital_persona, stdin=None, shell=False, universal_newlines=False)
+2025-05-25 19:59:50 - INFO - ------------------------------------
+2025-05-25 19:59:50 - INFO - Query received - Bio: Adventurer, Traveler, Tech Enthusiast, Roaming the world, Posts: ['Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 19:59:50 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 74.1%
+2025-05-25 19:59:50 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 1, Keywords: ['tech'], Confidence: 37.0%
+2025-05-25 19:59:50 - INFO - ********************
+2025-05-25 19:59:50 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer, tech_enthusiast
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world
+"""
+
+And these sample posts:
+"""
+Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 19:59:50 - INFO - ********************
+2025-05-25 19:59:50 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-bf9d6600-74cf-44d8-8904-c535b66e902e', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer, tech_enthusiast\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world\n"""\n\nAnd these sample posts:\n"""\nVisited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 19:59:50 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 19:59:50 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 19:59:50 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x107f86e90>
+2025-05-25 19:59:50 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x1111fe600> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 19:59:50 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x107c00a50>
+2025-05-25 19:59:50 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 19:59:50 - DEBUG - send_request_headers.complete
+2025-05-25 19:59:50 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 19:59:50 - DEBUG - send_request_body.complete
+2025-05-25 19:59:50 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 19:59:51 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 17:59:51 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'688'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'691'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199625'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'112ms'), (b'x-request-id', b'req_e1712d19eb37ecdd643441388a67d0fa'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=LQ5FfhEBBmxlqxnlRQETKL3MinfgWfghShzJIm1gV5M-1748195991-1.0.1.1-WE002izHBddfcuiyJFqGVCvts.MuJrEtC3ta74yQwrRWGKbENtQV_ScOTQ0zlCRJSWpZOmj._YZBfry5xqaj4VF.Ze_j_36bIs.3wivkfRs; path=/; expires=Sun, 25-May-25 18:29:51 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=2X.HnyHy2ruCazTe1S6ID_78uBCnJ0SH0QwwoE_gXVo-1748195991713-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9456edcdae2abba3-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 19:59:51 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:59:51 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 19:59:51 - DEBUG - receive_response_body.complete
+2025-05-25 19:59:51 - DEBUG - response_closed.started
+2025-05-25 19:59:51 - DEBUG - response_closed.complete
+2025-05-25 19:59:51 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 17:59:51 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '688'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '691'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199625'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '112ms'), ('x-request-id', 'req_e1712d19eb37ecdd643441388a67d0fa'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=LQ5FfhEBBmxlqxnlRQETKL3MinfgWfghShzJIm1gV5M-1748195991-1.0.1.1-WE002izHBddfcuiyJFqGVCvts.MuJrEtC3ta74yQwrRWGKbENtQV_ScOTQ0zlCRJSWpZOmj._YZBfry5xqaj4VF.Ze_j_36bIs.3wivkfRs; path=/; expires=Sun, 25-May-25 18:29:51 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=2X.HnyHy2ruCazTe1S6ID_78uBCnJ0SH0QwwoE_gXVo-1748195991713-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9456edcdae2abba3-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 19:59:51 - DEBUG - request_id: req_e1712d19eb37ecdd643441388a67d0fa
+2025-05-25 19:59:51 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 19:59:51 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples and the Black Forest. Your vlog on Maldives also shows your passion for sharing travel guides and stunning photos from around the world. Your adventurous spirit and focus on hidden gems and adventure activities align perfectly with the travel_adventurer persona.
+2025-05-25 19:59:51 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 19:59:51 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples and the Black Forest. Your vlog on Maldives also shows your passion for sharing travel guides and stunning photos from around the world. Your adventurous spirit and focus on hidden gems and adventure activities align perfectly with the travel_adventurer persona.
+2025-05-25 19:59:51 - INFO - ------------------------------------
+2025-05-25 19:59:51 - DEBUG - close.started
+2025-05-25 19:59:51 - DEBUG - close.complete
+2025-05-25 20:04:52 - INFO - ------------------------------------
+2025-05-25 20:04:52 - INFO - Query received - Bio: love tech, gadgets and technology
+, Posts: ['Adventurer, Traveler, Tech Enthusiast, Roaming the world', 'Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 20:04:52 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 3, Keywords: ['gadget', 'tech'], Confidence: 63.8%
+2025-05-25 20:04:52 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 42.6%
+2025-05-25 20:04:52 - INFO - ********************
+2025-05-25 20:04:52 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+tech_enthusiast, travel_adventurer
+
+And their descriptions:
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+
+A user has provided this short bio:
+"""
+love tech, gadgets and technology
+
+"""
+
+And these sample posts:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:04:52 - INFO - ********************
+2025-05-25 20:04:52 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-d212271b-05fc-46ca-953a-0f0aac88c6f9', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntech_enthusiast, travel_adventurer\n\nAnd their descriptions:\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\n\nA user has provided this short bio:\n"""\nlove tech, gadgets and technology\n\n"""\n\nAnd these sample posts:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:04:52 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:04:52 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:04:52 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10aa81cd0>
+2025-05-25 20:04:52 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10d9c29f0> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:04:52 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10f062c50>
+2025-05-25 20:04:52 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:04:52 - DEBUG - send_request_headers.complete
+2025-05-25 20:04:52 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:04:52 - DEBUG - send_request_body.complete
+2025-05-25 20:04:52 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:04:54 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:04:54 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'907'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'910'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199616'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'115ms'), (b'x-request-id', b'req_df52f5486db9945fc42b81283b6b8760'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=H.ddNOquiWtoBpTEc7naIuoGbhKaXa7X8Yx8UM29IHk-1748196294-1.0.1.1-4.iP3k7T_HvZaXID1q8AaVL87dooS9Pt7JI5YpvwVKICDdqFND0bYXp8D10BSFU9cbAve1ZkIywbjlE2Drj04J2dPz8Iki1YwSlrdo94GVQ; path=/; expires=Sun, 25-May-25 18:34:54 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=78PO60RCjOWBPacoV5fEtzm.AS.baTov_KrZ2.C3lIc-1748196294196-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9456f52dbfd0900d-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:04:54 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:04:54 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:04:54 - DEBUG - receive_response_body.complete
+2025-05-25 20:04:54 - DEBUG - response_closed.started
+2025-05-25 20:04:54 - DEBUG - response_closed.complete
+2025-05-25 20:04:54 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:04:54 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '907'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '910'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199616'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '115ms'), ('x-request-id', 'req_df52f5486db9945fc42b81283b6b8760'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=H.ddNOquiWtoBpTEc7naIuoGbhKaXa7X8Yx8UM29IHk-1748196294-1.0.1.1-4.iP3k7T_HvZaXID1q8AaVL87dooS9Pt7JI5YpvwVKICDdqFND0bYXp8D10BSFU9cbAve1ZkIywbjlE2Drj04J2dPz8Iki1YwSlrdo94GVQ; path=/; expires=Sun, 25-May-25 18:34:54 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=78PO60RCjOWBPacoV5fEtzm.AS.baTov_KrZ2.C3lIc-1748196294196-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9456f52dbfd0900d-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:04:54 - DEBUG - request_id: req_df52f5486db9945fc42b81283b6b8760
+2025-05-25 20:04:54 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:04:54 - INFO - Raw GPT Response:
+Persona: tech_enthusiast  
+Reasoning: You clearly have a passion for technology, gadgets, and all things digital based on your bio and the content you share. Your love for tech is evident in your interest in new tools and trends, as well as your enthusiasm for sharing reviews and tips. While you do mention travel and adventure in your posts, your focus seems to lean more towards technology and digital content. Your bio and posts align closely with the tech_enthusiast persona, making it the most fitting classification for you.
+2025-05-25 20:04:54 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:04:54 - INFO - GPT Analysis - Selected Persona: tech_enthusiast, Reasoning: You clearly have a passion for technology, gadgets, and all things digital based on your bio and the content you share. Your love for tech is evident in your interest in new tools and trends, as well as your enthusiasm for sharing reviews and tips. While you do mention travel and adventure in your posts, your focus seems to lean more towards technology and digital content. Your bio and posts align closely with the tech_enthusiast persona, making it the most fitting classification for you.
+2025-05-25 20:04:54 - INFO - ------------------------------------
+2025-05-25 20:04:54 - DEBUG - close.started
+2025-05-25 20:04:54 - DEBUG - close.complete
+2025-05-25 20:07:49 - INFO - ------------------------------------
+2025-05-25 20:07:49 - INFO - Query received - Bio: love tech, gadgets and technology, Posts: ['Recently checked out Google pixel 7. it was amazing']
+2025-05-25 20:07:49 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 3, Keywords: ['gadget', 'tech'], Confidence: 111.1%
+2025-05-25 20:07:49 - INFO - ********************
+2025-05-25 20:07:49 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+tech_enthusiast
+
+And their descriptions:
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+love tech, gadgets and technology
+"""
+
+And these sample posts:
+"""
+Recently checked out Google pixel 7. it was amazing
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:07:49 - INFO - ********************
+2025-05-25 20:07:50 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-8a41c286-8d3d-4e4d-9878-d2fddb5ef1b7', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntech_enthusiast\n\nAnd their descriptions:\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nlove tech, gadgets and technology\n"""\n\nAnd these sample posts:\n"""\nRecently checked out Google pixel 7. it was amazing\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:07:50 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:07:50 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:07:50 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10b248a50>
+2025-05-25 20:07:50 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10e13e690> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:07:50 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10413b650>
+2025-05-25 20:07:50 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:07:50 - DEBUG - send_request_headers.complete
+2025-05-25 20:07:50 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:07:50 - DEBUG - send_request_body.complete
+2025-05-25 20:07:50 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:07:52 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:07:52 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1080'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1085'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199711'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'86ms'), (b'x-request-id', b'req_541f194c46c9b0039bab8973c80ead0e'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=sCGUbQHH1wV7gTKWWw5SagIK9zESdDH4XH2GaMKjAdc-1748196472-1.0.1.1-iAXs3Ost3s0xd6l13WDbgDWFzCVoyh_8OP66STIaPNXhP4xb4oeHTKQLV2hy5hTLDHJUuJN0G8SvsNG89n.yErIbHVt8oJjLPkoZs1rm3CQ; path=/; expires=Sun, 25-May-25 18:37:52 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=S3ngcgbgH6WlDSThlr7axoLWVVAugGzji8YM6bKudAI-1748196472119-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9456f984b8f5d26e-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:07:52 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:07:52 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:07:52 - DEBUG - receive_response_body.complete
+2025-05-25 20:07:52 - DEBUG - response_closed.started
+2025-05-25 20:07:52 - DEBUG - response_closed.complete
+2025-05-25 20:07:52 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:07:52 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1080'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1085'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199711'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '86ms'), ('x-request-id', 'req_541f194c46c9b0039bab8973c80ead0e'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=sCGUbQHH1wV7gTKWWw5SagIK9zESdDH4XH2GaMKjAdc-1748196472-1.0.1.1-iAXs3Ost3s0xd6l13WDbgDWFzCVoyh_8OP66STIaPNXhP4xb4oeHTKQLV2hy5hTLDHJUuJN0G8SvsNG89n.yErIbHVt8oJjLPkoZs1rm3CQ; path=/; expires=Sun, 25-May-25 18:37:52 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=S3ngcgbgH6WlDSThlr7axoLWVVAugGzji8YM6bKudAI-1748196472119-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9456f984b8f5d26e-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:07:52 - DEBUG - request_id: req_541f194c46c9b0039bab8973c80ead0e
+2025-05-25 20:07:52 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:07:52 - INFO - Raw GPT Response:
+Persona: tech_enthusiast  
+Reasoning: You clearly have a passion for technology and gadgets, as indicated by your love for tech, gadgets, and technology. Your recent post about checking out the Google Pixel 7 shows that you are actively engaged in trying out new digital tools and sharing your experiences with others. Your interest in the latest tech trends aligns perfectly with the tech_enthusiast persona, as you enjoy exploring new gadgets, apps, and technology advancements. Your enthusiasm for sharing reviews and tips about new technology further solidifies your classification as a tech enthusiast. Keep up the great work in staying up-to-date with the latest tech innovations!
+2025-05-25 20:07:52 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:07:52 - INFO - GPT Analysis - Selected Persona: tech_enthusiast, Reasoning: You clearly have a passion for technology and gadgets, as indicated by your love for tech, gadgets, and technology. Your recent post about checking out the Google Pixel 7 shows that you are actively engaged in trying out new digital tools and sharing your experiences with others. Your interest in the latest tech trends aligns perfectly with the tech_enthusiast persona, as you enjoy exploring new gadgets, apps, and technology advancements. Your enthusiasm for sharing reviews and tips about new technology further solidifies your classification as a tech enthusiast. Keep up the great work in staying up-to-date with the latest tech innovations!
+2025-05-25 20:07:52 - INFO - ------------------------------------
+2025-05-25 20:07:52 - DEBUG - close.started
+2025-05-25 20:07:52 - DEBUG - close.complete
+2025-05-25 20:10:37 - INFO - ------------------------------------
+2025-05-25 20:10:37 - INFO - Query received - Bio: Love food, going out to resturants and trying out new dishes, Posts: ['Talked to the chef of Pizza Italia, What an amazing experience ', 'Somehow i always have cravings for noodles', 'The Pasta from Goti Pasta has amazing flavour']
+2025-05-25 20:10:37 - INFO - Rule-based match - Persona: Foodie Explorer 🍣, Score: 3, Keywords: ['chef', 'craving', 'food'], Confidence: 81.1%
+2025-05-25 20:10:37 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 1, Keywords: ['experience'], Confidence: 27.0%
+2025-05-25 20:10:37 - INFO - ********************
+2025-05-25 20:10:37 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+foodie_explorer, travel_adventurer
+
+And their descriptions:
+foodie_explorer: Passionate about food, restaurants, and sharing culinary adventures. Loves discovering new cuisines, reviewing eateries, and posting mouth-watering food photos.
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+
+A user has provided this short bio:
+"""
+Love food, going out to resturants and trying out new dishes
+"""
+
+And these sample posts:
+"""
+Talked to the chef of Pizza Italia, What an amazing experience  Somehow i always have cravings for noodles The Pasta from Goti Pasta has amazing flavour
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:10:37 - INFO - ********************
+2025-05-25 20:10:37 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-3888f8ce-a015-44d9-95ca-61538d438984', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\nfoodie_explorer, travel_adventurer\n\nAnd their descriptions:\nfoodie_explorer: Passionate about food, restaurants, and sharing culinary adventures. Loves discovering new cuisines, reviewing eateries, and posting mouth-watering food photos.\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\n\nA user has provided this short bio:\n"""\nLove food, going out to resturants and trying out new dishes\n"""\n\nAnd these sample posts:\n"""\nTalked to the chef of Pizza Italia, What an amazing experience  Somehow i always have cravings for noodles The Pasta from Goti Pasta has amazing flavour\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:10:37 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:10:37 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:10:37 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10cb92d10>
+2025-05-25 20:10:37 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x1054935c0> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:10:37 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10314d150>
+2025-05-25 20:10:37 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:10:37 - DEBUG - send_request_headers.complete
+2025-05-25 20:10:37 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:10:37 - DEBUG - send_request_body.complete
+2025-05-25 20:10:37 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:10:38 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:10:38 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'665'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'669'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199632'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'110ms'), (b'x-request-id', b'req_34d9348d0910bea5b67d2fe55ea0abf9'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=0GNJUENfMnbBibGc.9vDovaCudXrzLviuM21XRJwcBQ-1748196638-1.0.1.1-p3U8rj_HAATAgkewpcnNfIBGp_Qh07F0JtCmvoKxOv7yaEbsN3CXraP4td.tAl8pGl3CfjgBxfSsRawJApZJ.Qc3fios_i1Je6RNTfNrID0; path=/; expires=Sun, 25-May-25 18:40:38 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=m8caagKPo0CEMOF_8DGWZmLiQINDN_E1X2YCq7iNJi0-1748196638440-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9456fd97e86418f5-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:10:38 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:10:38 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:10:38 - DEBUG - receive_response_body.complete
+2025-05-25 20:10:38 - DEBUG - response_closed.started
+2025-05-25 20:10:38 - DEBUG - response_closed.complete
+2025-05-25 20:10:38 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:10:38 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '665'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '669'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199632'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '110ms'), ('x-request-id', 'req_34d9348d0910bea5b67d2fe55ea0abf9'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=0GNJUENfMnbBibGc.9vDovaCudXrzLviuM21XRJwcBQ-1748196638-1.0.1.1-p3U8rj_HAATAgkewpcnNfIBGp_Qh07F0JtCmvoKxOv7yaEbsN3CXraP4td.tAl8pGl3CfjgBxfSsRawJApZJ.Qc3fios_i1Je6RNTfNrID0; path=/; expires=Sun, 25-May-25 18:40:38 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=m8caagKPo0CEMOF_8DGWZmLiQINDN_E1X2YCq7iNJi0-1748196638440-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9456fd97e86418f5-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:10:38 - DEBUG - request_id: req_34d9348d0910bea5b67d2fe55ea0abf9
+2025-05-25 20:10:38 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:10:38 - INFO - Raw GPT Response:
+Persona: foodie_explorer  
+Reasoning: You clearly have a passion for food and trying out new dishes, as indicated by your love for going out to restaurants and trying new dishes. Your posts about talking to chefs and craving noodles show that you enjoy sharing culinary experiences and discovering new flavors. Your focus on food-related content aligns well with the foodie_explorer persona, which is all about sharing culinary adventures and reviewing eateries.
+2025-05-25 20:10:38 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:10:38 - INFO - GPT Analysis - Selected Persona: foodie_explorer, Reasoning: You clearly have a passion for food and trying out new dishes, as indicated by your love for going out to restaurants and trying new dishes. Your posts about talking to chefs and craving noodles show that you enjoy sharing culinary experiences and discovering new flavors. Your focus on food-related content aligns well with the foodie_explorer persona, which is all about sharing culinary adventures and reviewing eateries.
+2025-05-25 20:10:38 - INFO - ------------------------------------
+2025-05-25 20:10:38 - DEBUG - close.started
+2025-05-25 20:10:38 - DEBUG - close.complete
+2025-05-25 20:13:18 - INFO - ------------------------------------
+2025-05-25 20:13:18 - INFO - Query received - Bio: Mental Health Expert, Influencer of youth, Posts: ['Here are the 10 reasons i suggest doing Yoga every day', 'Self-care and routine are the two most imp things in daily life ', 'A happy mind results in a happy mood']
+2025-05-25 20:13:18 - INFO - Rule-based match - Persona: Wellness Guru 🧘, Score: 3, Keywords: ['health', 'routine', 'yoga'], Confidence: 96.8%
+2025-05-25 20:13:18 - INFO - Rule-based match - Persona: Fashion Trendsetter 👗, Score: 1, Keywords: ['influencer'], Confidence: 32.3%
+2025-05-25 20:13:18 - INFO - ********************
+2025-05-25 20:13:18 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+wellness_guru, fashion_trendsetter
+
+And their descriptions:
+wellness_guru: Focused on health, mindfulness, and inspiring others to live well. Shares tips on fitness, meditation, and healthy living, often posting motivational content.
+fashion_trendsetter: Always ahead of the curve in style, this persona loves sharing outfit inspiration, fashion hauls, and the latest trends. Frequently collaborates with brands and posts about seasonal collections.
+
+A user has provided this short bio:
+"""
+Mental Health Expert, Influencer of youth
+"""
+
+And these sample posts:
+"""
+Here are the 10 reasons i suggest doing Yoga every day Self-care and routine are the two most imp things in daily life  A happy mind results in a happy mood
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:13:18 - INFO - ********************
+2025-05-25 20:13:18 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-0ab88bb8-ba7e-45e0-b3b3-7a9435e55e76', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\nwellness_guru, fashion_trendsetter\n\nAnd their descriptions:\nwellness_guru: Focused on health, mindfulness, and inspiring others to live well. Shares tips on fitness, meditation, and healthy living, often posting motivational content.\nfashion_trendsetter: Always ahead of the curve in style, this persona loves sharing outfit inspiration, fashion hauls, and the latest trends. Frequently collaborates with brands and posts about seasonal collections.\n\nA user has provided this short bio:\n"""\nMental Health Expert, Influencer of youth\n"""\n\nAnd these sample posts:\n"""\nHere are the 10 reasons i suggest doing Yoga every day Self-care and routine are the two most imp things in daily life  A happy mind results in a happy mood\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:13:18 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:13:18 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:13:18 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10cfdddd0>
+2025-05-25 20:13:18 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10cbf1490> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:13:19 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1076f1ed0>
+2025-05-25 20:13:19 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:13:19 - DEBUG - send_request_headers.complete
+2025-05-25 20:13:19 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:13:19 - DEBUG - send_request_body.complete
+2025-05-25 20:13:19 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:13:22 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:13:22 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1114'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1119'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199633'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'110ms'), (b'x-request-id', b'req_1ffa583818225c58ef6ee71ea98eae68'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=6FES0.y97tw9mzcnkgQn5QpZMl_4sYsoVwdeDrEMpM0-1748196802-1.0.1.1-V.Fm7zFBjNbDjf3BCCTk0mKFtV9Uk3.bt._omave89UV1keeg72_3_EFM1XhG8IGq8261e1C3PA.btICtEfTwDyDggTnKUpSYzqJ7OS06ls; path=/; expires=Sun, 25-May-25 18:43:22 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=k8TDOTmiCzugP7MxNdcabM1hUAA9rTojSKMCabVqipk-1748196802343-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9457018a28035223-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:13:22 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:13:22 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:13:22 - DEBUG - receive_response_body.complete
+2025-05-25 20:13:22 - DEBUG - response_closed.started
+2025-05-25 20:13:22 - DEBUG - response_closed.complete
+2025-05-25 20:13:22 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:13:22 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1114'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1119'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199633'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '110ms'), ('x-request-id', 'req_1ffa583818225c58ef6ee71ea98eae68'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=6FES0.y97tw9mzcnkgQn5QpZMl_4sYsoVwdeDrEMpM0-1748196802-1.0.1.1-V.Fm7zFBjNbDjf3BCCTk0mKFtV9Uk3.bt._omave89UV1keeg72_3_EFM1XhG8IGq8261e1C3PA.btICtEfTwDyDggTnKUpSYzqJ7OS06ls; path=/; expires=Sun, 25-May-25 18:43:22 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=k8TDOTmiCzugP7MxNdcabM1hUAA9rTojSKMCabVqipk-1748196802343-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9457018a28035223-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:13:22 - DEBUG - request_id: req_1ffa583818225c58ef6ee71ea98eae68
+2025-05-25 20:13:22 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:13:22 - INFO - Raw GPT Response:
+Persona: wellness_guru  
+Reasoning: 
+You clearly have a strong focus on mental health and well-being, as seen in your bio and posts about yoga, self-care, and a happy mind. Your emphasis on inspiring others to live well aligns perfectly with the wellness_guru persona, who is dedicated to health, mindfulness, and motivating others to lead a healthy lifestyle. Your content on fitness, meditation, and daily routines resonates with this persona, making it the most fitting classification for you. Keep spreading positivity and wellness tips to inspire your audience!
+2025-05-25 20:13:22 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:13:22 - INFO - GPT Analysis - Selected Persona: wellness_guru, Reasoning: 
+2025-05-25 20:13:22 - INFO - ------------------------------------
+2025-05-25 20:13:22 - DEBUG - close.started
+2025-05-25 20:13:22 - DEBUG - close.complete
+2025-05-25 20:14:11 - INFO - ------------------------------------
+2025-05-25 20:14:11 - INFO - Query received - Bio: Mental Health Expert, Influencer of youth, Posts: ['Here are the 10 reasons i suggest doing Yoga every day', 'Self-care and routine are the two most imp things in daily life ', 'A happy mind results in a happy mood']
+2025-05-25 20:14:11 - INFO - Rule-based match - Persona: Wellness Guru 🧘, Score: 3, Keywords: ['health', 'routine', 'yoga'], Confidence: 96.8%
+2025-05-25 20:14:11 - INFO - Rule-based match - Persona: Fashion Trendsetter 👗, Score: 1, Keywords: ['influencer'], Confidence: 32.3%
+2025-05-25 20:14:11 - INFO - ********************
+2025-05-25 20:14:11 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+wellness_guru, fashion_trendsetter
+
+And their descriptions:
+wellness_guru: Focused on health, mindfulness, and inspiring others to live well. Shares tips on fitness, meditation, and healthy living, often posting motivational content.
+fashion_trendsetter: Always ahead of the curve in style, this persona loves sharing outfit inspiration, fashion hauls, and the latest trends. Frequently collaborates with brands and posts about seasonal collections.
+
+A user has provided this short bio:
+"""
+Mental Health Expert, Influencer of youth
+"""
+
+And these sample posts:
+"""
+Here are the 10 reasons i suggest doing Yoga every day Self-care and routine are the two most imp things in daily life  A happy mind results in a happy mood
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:14:11 - INFO - ********************
+2025-05-25 20:14:11 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-7d9e765d-072f-46e8-a168-4df818378bbb', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\nwellness_guru, fashion_trendsetter\n\nAnd their descriptions:\nwellness_guru: Focused on health, mindfulness, and inspiring others to live well. Shares tips on fitness, meditation, and healthy living, often posting motivational content.\nfashion_trendsetter: Always ahead of the curve in style, this persona loves sharing outfit inspiration, fashion hauls, and the latest trends. Frequently collaborates with brands and posts about seasonal collections.\n\nA user has provided this short bio:\n"""\nMental Health Expert, Influencer of youth\n"""\n\nAnd these sample posts:\n"""\nHere are the 10 reasons i suggest doing Yoga every day Self-care and routine are the two most imp things in daily life  A happy mind results in a happy mood\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:14:11 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:14:11 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:14:11 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10faf9fd0>
+2025-05-25 20:14:11 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10e13e690> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:14:11 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10fafab90>
+2025-05-25 20:14:11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:14:11 - DEBUG - send_request_headers.complete
+2025-05-25 20:14:11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:14:11 - DEBUG - send_request_body.complete
+2025-05-25 20:14:11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:14:13 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:14:13 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1004'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1008'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199632'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'110ms'), (b'x-request-id', b'req_8668c75ac2fce880a0ba88682bcdd663'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=M_yiVnJWfNRFdgyfcqETbMUgnQ1wFs1phf91SsGB7vQ-1748196853-1.0.1.1-SsaYXTOQYravydysS.eTJEBmReDzpKhOo11VsXvrJfYNrj8KMNQGUPpFs3BHEoVr8XD7GXZb_vp64STBwIaTh0UEHr_prfncjyZpgYvHaxg; path=/; expires=Sun, 25-May-25 18:44:13 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=oBqB7uEow7XWmSARMjgzzPYsEiPpeowSlmGpQNhS360-1748196853178-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'945702d3eec02c2f-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:14:13 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:14:13 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:14:13 - DEBUG - receive_response_body.complete
+2025-05-25 20:14:13 - DEBUG - response_closed.started
+2025-05-25 20:14:13 - DEBUG - response_closed.complete
+2025-05-25 20:14:13 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:14:13 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1004'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1008'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199632'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '110ms'), ('x-request-id', 'req_8668c75ac2fce880a0ba88682bcdd663'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=M_yiVnJWfNRFdgyfcqETbMUgnQ1wFs1phf91SsGB7vQ-1748196853-1.0.1.1-SsaYXTOQYravydysS.eTJEBmReDzpKhOo11VsXvrJfYNrj8KMNQGUPpFs3BHEoVr8XD7GXZb_vp64STBwIaTh0UEHr_prfncjyZpgYvHaxg; path=/; expires=Sun, 25-May-25 18:44:13 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=oBqB7uEow7XWmSARMjgzzPYsEiPpeowSlmGpQNhS360-1748196853178-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '945702d3eec02c2f-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:14:13 - DEBUG - request_id: req_8668c75ac2fce880a0ba88682bcdd663
+2025-05-25 20:14:13 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:14:13 - INFO - Raw GPT Response:
+Persona: wellness_guru  
+Reasoning: You clearly have a strong focus on mental health and inspiring others, which aligns well with the wellness_guru persona. Your emphasis on self-care, routine, and a happy mind resonates with the wellness guru's dedication to health, mindfulness, and motivating others to live well. Additionally, your content about yoga and daily routines fits perfectly with the wellness guru's sharing of fitness and motivational tips. Your bio as a Mental Health Expert also reinforces the idea that you are dedicated to promoting well-being, making the wellness_guru persona the most fitting classification for you.
+2025-05-25 20:14:13 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:14:13 - INFO - GPT Analysis - Selected Persona: wellness_guru, Reasoning: You clearly have a strong focus on mental health and inspiring others, which aligns well with the wellness_guru persona. Your emphasis on self-care, routine, and a happy mind resonates with the wellness guru's dedication to health, mindfulness, and motivating others to live well. Additionally, your content about yoga and daily routines fits perfectly with the wellness guru's sharing of fitness and motivational tips. Your bio as a Mental Health Expert also reinforces the idea that you are dedicated to promoting well-being, making the wellness_guru persona the most fitting classification for you.
+2025-05-25 20:14:13 - INFO - ------------------------------------
+2025-05-25 20:14:13 - DEBUG - close.started
+2025-05-25 20:14:13 - DEBUG - close.complete
+2025-05-25 20:17:09 - INFO - ------------------------------------
+2025-05-25 20:17:09 - INFO - Query received - Bio: Love to see everyone dressed. fashion designer by birth, Posts: ['Here are the 10 sweetest dresses for christmas this year', 'The designer clothes of zara are the best', 'I love the new collection by ']
+2025-05-25 20:17:09 - INFO - Rule-based match - Persona: Fashion Trendsetter 👗, Score: 3, Keywords: ['collection', 'designer', 'fashion'], Confidence: 100.0%
+2025-05-25 20:17:09 - INFO - ********************
+2025-05-25 20:17:09 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+fashion_trendsetter
+
+And their descriptions:
+fashion_trendsetter: Always ahead of the curve in style, this persona loves sharing outfit inspiration, fashion hauls, and the latest trends. Frequently collaborates with brands and posts about seasonal collections.
+
+A user has provided this short bio:
+"""
+Love to see everyone dressed. fashion designer by birth
+"""
+
+And these sample posts:
+"""
+Here are the 10 sweetest dresses for christmas this year The designer clothes of zara are the best I love the new collection by 
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:17:09 - INFO - ********************
+2025-05-25 20:17:09 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-17f309c2-51be-4d90-88ca-e2998317ca9f', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\nfashion_trendsetter\n\nAnd their descriptions:\nfashion_trendsetter: Always ahead of the curve in style, this persona loves sharing outfit inspiration, fashion hauls, and the latest trends. Frequently collaborates with brands and posts about seasonal collections.\n\nA user has provided this short bio:\n"""\nLove to see everyone dressed. fashion designer by birth\n"""\n\nAnd these sample posts:\n"""\nHere are the 10 sweetest dresses for christmas this year The designer clothes of zara are the best I love the new collection by \n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:17:09 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:17:09 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:17:09 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10fa53d50>
+2025-05-25 20:17:09 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x105493800> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:17:09 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10fafb610>
+2025-05-25 20:17:09 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:17:09 - DEBUG - send_request_headers.complete
+2025-05-25 20:17:09 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:17:09 - DEBUG - send_request_body.complete
+2025-05-25 20:17:09 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:17:11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:17:11 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1787'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1790'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199683'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'94ms'), (b'x-request-id', b'req_c47589315e131af949b361eba81dbb6f'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Nk0.STEV3zcrbOLLpLruJDfjdJZgsVXvuN0_GVE03Vg-1748197031-1.0.1.1-U_90Yd.DbrW0YENVZ_s_2.xEMY0GCKiLbnMMFzYOYAtQfhp0xYAPrWmEJAlxUOMrcPsf8uYUT7xKwhItdeTwASORKB4H583VkRfkq02hG9c; path=/; expires=Sun, 25-May-25 18:47:11 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=7Hw5ZhRA9X9Ekls0JqWGQOZuzkrQjsFQblGgv2Zr6DE-1748197031842-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9457072c2845d380-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:17:11 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:17:11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:17:11 - DEBUG - receive_response_body.complete
+2025-05-25 20:17:11 - DEBUG - response_closed.started
+2025-05-25 20:17:11 - DEBUG - response_closed.complete
+2025-05-25 20:17:11 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:17:11 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1787'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1790'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199683'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '94ms'), ('x-request-id', 'req_c47589315e131af949b361eba81dbb6f'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=Nk0.STEV3zcrbOLLpLruJDfjdJZgsVXvuN0_GVE03Vg-1748197031-1.0.1.1-U_90Yd.DbrW0YENVZ_s_2.xEMY0GCKiLbnMMFzYOYAtQfhp0xYAPrWmEJAlxUOMrcPsf8uYUT7xKwhItdeTwASORKB4H583VkRfkq02hG9c; path=/; expires=Sun, 25-May-25 18:47:11 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=7Hw5ZhRA9X9Ekls0JqWGQOZuzkrQjsFQblGgv2Zr6DE-1748197031842-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9457072c2845d380-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:17:11 - DEBUG - request_id: req_c47589315e131af949b361eba81dbb6f
+2025-05-25 20:17:11 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:17:11 - INFO - Raw GPT Response:
+Persona: fashion_trendsetter  
+Reasoning: You clearly have a passion for fashion and love staying up-to-date with the latest trends and collections. Your bio suggests that you have a natural eye for style, which aligns perfectly with the fashion_trendsetter persona. Your posts about dresses for Christmas and designer clothes from Zara indicate that you enjoy sharing outfit inspiration and discussing new collections, which are key characteristics of this persona. Additionally, your mention of being a fashion designer by birth further solidifies your fit as a fashion trendsetter who collaborates with brands and shares fashion hauls. Your love for seeing everyone dressed also highlights your desire to inspire others with your fashion choices, making this persona the most fitting for you.
+2025-05-25 20:17:11 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:17:11 - INFO - GPT Analysis - Selected Persona: fashion_trendsetter, Reasoning: You clearly have a passion for fashion and love staying up-to-date with the latest trends and collections. Your bio suggests that you have a natural eye for style, which aligns perfectly with the fashion_trendsetter persona. Your posts about dresses for Christmas and designer clothes from Zara indicate that you enjoy sharing outfit inspiration and discussing new collections, which are key characteristics of this persona. Additionally, your mention of being a fashion designer by birth further solidifies your fit as a fashion trendsetter who collaborates with brands and shares fashion hauls. Your love for seeing everyone dressed also highlights your desire to inspire others with your fashion choices, making this persona the most fitting for you.
+2025-05-25 20:17:11 - INFO - ------------------------------------
+2025-05-25 20:17:12 - DEBUG - close.started
+2025-05-25 20:17:12 - DEBUG - close.complete
+2025-05-25 20:19:52 - INFO - ------------------------------------
+2025-05-25 20:19:52 - INFO - Query received - Bio: Adventurer, Traveler, Tech Enthusiast, Roaming the world, Posts: ['Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 20:19:52 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 74.1%
+2025-05-25 20:19:52 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 1, Keywords: ['tech'], Confidence: 37.0%
+2025-05-25 20:19:52 - INFO - ********************
+2025-05-25 20:19:52 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer, tech_enthusiast
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world
+"""
+
+And these sample posts:
+"""
+Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:19:52 - INFO - ********************
+2025-05-25 20:19:52 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-74cefc5b-4870-4115-a53d-24e4acd28611', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer, tech_enthusiast\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world\n"""\n\nAnd these sample posts:\n"""\nVisited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:19:52 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:19:52 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:19:52 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10cb40610>
+2025-05-25 20:19:52 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10dd36d50> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:19:52 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10f35e290>
+2025-05-25 20:19:52 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:19:52 - DEBUG - send_request_headers.complete
+2025-05-25 20:19:52 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:19:52 - DEBUG - send_request_body.complete
+2025-05-25 20:19:52 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:19:53 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:19:53 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'730'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'735'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199625'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'112ms'), (b'x-request-id', b'req_70926afda8d3f6691e7109ffad30a449'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=175dkhBmGcBVcBso9kz63lufxhQLiLSNQed8QT7zK6A-1748197193-1.0.1.1-1Qbi1rA0jUlXnrFRAMLweB6bztu0TQ_AP0KmJIYzG0oS7pznXDVXD25sU6hFmIysRX3PrOe0LKGHzz6D5W6Te.Ib8PinkhyMrUheyd3XwlQ; path=/; expires=Sun, 25-May-25 18:49:53 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=qChl2JafMxi6MT7y9h_.Z_Nc1BrI2k0oVIDpYi8pjqQ-1748197193665-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'94570b253e5303f8-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:19:53 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:19:53 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:19:53 - DEBUG - receive_response_body.complete
+2025-05-25 20:19:53 - DEBUG - response_closed.started
+2025-05-25 20:19:53 - DEBUG - response_closed.complete
+2025-05-25 20:19:53 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:19:53 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '730'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '735'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199625'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '112ms'), ('x-request-id', 'req_70926afda8d3f6691e7109ffad30a449'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=175dkhBmGcBVcBso9kz63lufxhQLiLSNQed8QT7zK6A-1748197193-1.0.1.1-1Qbi1rA0jUlXnrFRAMLweB6bztu0TQ_AP0KmJIYzG0oS7pznXDVXD25sU6hFmIysRX3PrOe0LKGHzz6D5W6Te.Ib8PinkhyMrUheyd3XwlQ; path=/; expires=Sun, 25-May-25 18:49:53 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=qChl2JafMxi6MT7y9h_.Z_Nc1BrI2k0oVIDpYi8pjqQ-1748197193665-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '94570b253e5303f8-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:19:53 - DEBUG - request_id: req_70926afda8d3f6691e7109ffad30a449
+2025-05-25 20:19:53 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:19:53 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples, Black Forest, and Maldives. Your passion for sharing travel guides, tips, and stunning photos aligns perfectly with the travel_adventurer persona, who often posts about hidden gems and adventure activities. Your adventurous spirit and love for roaming the world make you a great fit for this persona.
+2025-05-25 20:19:53 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:19:53 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples, Black Forest, and Maldives. Your passion for sharing travel guides, tips, and stunning photos aligns perfectly with the travel_adventurer persona, who often posts about hidden gems and adventure activities. Your adventurous spirit and love for roaming the world make you a great fit for this persona.
+2025-05-25 20:19:53 - INFO - ------------------------------------
+2025-05-25 20:19:53 - DEBUG - close.started
+2025-05-25 20:19:53 - DEBUG - close.complete
+2025-05-25 20:39:14 - INFO - ------------------------------------
+2025-05-25 20:39:14 - INFO - Query received - Bio: Adventurer, Traveler, Tech Enthusiast, Roaming the world, Posts: ['Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 20:39:14 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 74.1%
+2025-05-25 20:39:14 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 1, Keywords: ['tech'], Confidence: 37.0%
+2025-05-25 20:39:14 - INFO - ********************
+2025-05-25 20:39:14 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer, tech_enthusiast
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world
+"""
+
+And these sample posts:
+"""
+Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:39:14 - INFO - ********************
+2025-05-25 20:39:14 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-152f37a2-f289-41a1-91da-3f0e3b26598a', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer, tech_enthusiast\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world\n"""\n\nAnd these sample posts:\n"""\nVisited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:39:14 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:39:14 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:39:14 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11e7f1310>
+2025-05-25 20:39:14 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x128b131d0> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:39:14 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11fe40b10>
+2025-05-25 20:39:14 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:39:14 - DEBUG - send_request_headers.complete
+2025-05-25 20:39:14 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:39:14 - DEBUG - send_request_body.complete
+2025-05-25 20:39:14 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:39:16 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:39:16 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1021'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1025'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199625'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'112ms'), (b'x-request-id', b'req_c3575d5e4316442878c597832412bd4c'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=cM1kFhks7Ryy6QOV3F2E5FIIpIVFfTS9PinV5r6JqV4-1748198356-1.0.1.1-R7d74XkMlQI4Nr37kTOSe1DbFZx5wEdp2XgO6sbT.dssU85vFBIZVytOAxovV6z2hYgYoYrjWG2UVHUg.eD8yinC29okzOn.qzGKHT9Ef40; path=/; expires=Sun, 25-May-25 19:09:16 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=ItpYE2W.clRv7wCCm0uG_nTuRH80Hmd1TYrGRRSFsbE-1748198356269-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'945727855ce718d3-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:39:16 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:39:16 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:39:16 - DEBUG - receive_response_body.complete
+2025-05-25 20:39:16 - DEBUG - response_closed.started
+2025-05-25 20:39:16 - DEBUG - response_closed.complete
+2025-05-25 20:39:16 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:39:16 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1021'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1025'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199625'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '112ms'), ('x-request-id', 'req_c3575d5e4316442878c597832412bd4c'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=cM1kFhks7Ryy6QOV3F2E5FIIpIVFfTS9PinV5r6JqV4-1748198356-1.0.1.1-R7d74XkMlQI4Nr37kTOSe1DbFZx5wEdp2XgO6sbT.dssU85vFBIZVytOAxovV6z2hYgYoYrjWG2UVHUg.eD8yinC29okzOn.qzGKHT9Ef40; path=/; expires=Sun, 25-May-25 19:09:16 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=ItpYE2W.clRv7wCCm0uG_nTuRH80Hmd1TYrGRRSFsbE-1748198356269-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '945727855ce718d3-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:39:16 - DEBUG - request_id: req_c3575d5e4316442878c597832412bd4c
+2025-05-25 20:39:16 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:39:16 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places and sharing your experiences with others, as seen in your posts about Naples, Black Forest, and Maldives. Your bio also mentions being an adventurer and traveler, which aligns perfectly with the travel_adventurer persona. This persona is all about discovering new cultures, hidden gems, and adventure activities, which seems to resonate with your interests and the content you share. Additionally, the use of terms like "Adventurer" and "Traveler" in your bio further solidifies the fit with the travel_adventurer persona.
+2025-05-25 20:39:16 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:39:16 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places and sharing your experiences with others, as seen in your posts about Naples, Black Forest, and Maldives. Your bio also mentions being an adventurer and traveler, which aligns perfectly with the travel_adventurer persona. This persona is all about discovering new cultures, hidden gems, and adventure activities, which seems to resonate with your interests and the content you share. Additionally, the use of terms like "Adventurer" and "Traveler" in your bio further solidifies the fit with the travel_adventurer persona.
+2025-05-25 20:39:16 - INFO - ------------------------------------
+2025-05-25 20:39:16 - DEBUG - close.started
+2025-05-25 20:39:16 - DEBUG - close.complete
+2025-05-25 20:39:28 - INFO - ------------------------------------
+2025-05-25 20:39:28 - INFO - Query received - Bio: Adventurer, Traveler, Tech Enthusiast, Roaming the world, Posts: ['Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 20:39:28 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 74.1%
+2025-05-25 20:39:28 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 1, Keywords: ['tech'], Confidence: 37.0%
+2025-05-25 20:39:28 - INFO - ********************
+2025-05-25 20:39:28 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer, tech_enthusiast
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world
+"""
+
+And these sample posts:
+"""
+Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:39:28 - INFO - ********************
+2025-05-25 20:39:28 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-6d429f45-c777-445a-831d-713727d8c52f', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer, tech_enthusiast\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world\n"""\n\nAnd these sample posts:\n"""\nVisited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:39:28 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:39:28 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:39:28 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x12a2e5810>
+2025-05-25 20:39:28 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x128b11370> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:39:28 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x12a2e74d0>
+2025-05-25 20:39:28 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:39:28 - DEBUG - send_request_headers.complete
+2025-05-25 20:39:28 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:39:28 - DEBUG - send_request_body.complete
+2025-05-25 20:39:28 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:39:29 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:39:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'931'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'934'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199625'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'112ms'), (b'x-request-id', b'req_5df773103c12bf2b1d2f3f800bda4dd3'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=tVWZ68224C0iEe6vDZ6XNUNBVacSg_DYojKawqpJiHA-1748198369-1.0.1.1-R72JtU5cLE2O8pyrzxz0pI_wPao1Q5GPtNPh38yOf68EEnKx2sc4GVyQihaW4xMmcN.aY3YvrZB.jFuGC3JEdN6GqK.FHTPS3j_4.3lB2Og; path=/; expires=Sun, 25-May-25 19:09:29 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=mSieR1pNc7ExmTknvKxFNlxVWxOy9h5uD4s0PsxnsGk-1748198369442-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'945727d91a973a7c-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:39:29 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:39:29 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:39:29 - DEBUG - receive_response_body.complete
+2025-05-25 20:39:29 - DEBUG - response_closed.started
+2025-05-25 20:39:29 - DEBUG - response_closed.complete
+2025-05-25 20:39:29 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:39:29 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '931'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '934'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199625'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '112ms'), ('x-request-id', 'req_5df773103c12bf2b1d2f3f800bda4dd3'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=tVWZ68224C0iEe6vDZ6XNUNBVacSg_DYojKawqpJiHA-1748198369-1.0.1.1-R72JtU5cLE2O8pyrzxz0pI_wPao1Q5GPtNPh38yOf68EEnKx2sc4GVyQihaW4xMmcN.aY3YvrZB.jFuGC3JEdN6GqK.FHTPS3j_4.3lB2Og; path=/; expires=Sun, 25-May-25 19:09:29 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=mSieR1pNc7ExmTknvKxFNlxVWxOy9h5uD4s0PsxnsGk-1748198369442-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '945727d91a973a7c-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:39:29 - DEBUG - request_id: req_5df773103c12bf2b1d2f3f800bda4dd3
+2025-05-25 20:39:29 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:39:29 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places and sharing your experiences with others. Your posts about visiting different locations, sharing travel guides, and vlogging your stay in Maldives all point towards a passion for adventure and discovering hidden gems. Your bio mentioning being an adventurer and traveler aligns perfectly with the travel_adventurer persona, as it captures your love for exploring new cultures and experiences. Your content reflects a focus on travel and adventure activities, making you a great fit for the travel_adventurer persona in the world of influencer and brand marketing.
+2025-05-25 20:39:29 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:39:29 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places and sharing your experiences with others. Your posts about visiting different locations, sharing travel guides, and vlogging your stay in Maldives all point towards a passion for adventure and discovering hidden gems. Your bio mentioning being an adventurer and traveler aligns perfectly with the travel_adventurer persona, as it captures your love for exploring new cultures and experiences. Your content reflects a focus on travel and adventure activities, making you a great fit for the travel_adventurer persona in the world of influencer and brand marketing.
+2025-05-25 20:39:29 - INFO - ------------------------------------
+2025-05-25 20:39:29 - DEBUG - close.started
+2025-05-25 20:39:29 - DEBUG - close.complete
+2025-05-25 20:39:58 - INFO - ------------------------------------
+2025-05-25 20:39:58 - INFO - Query received - Bio: Adventurer, Traveler, Tech Enthusiast, Roaming the world, Posts: ['Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 20:39:58 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 74.1%
+2025-05-25 20:39:58 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 1, Keywords: ['tech'], Confidence: 37.0%
+2025-05-25 20:39:58 - INFO - ********************
+2025-05-25 20:39:58 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer, tech_enthusiast
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world
+"""
+
+And these sample posts:
+"""
+Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:39:58 - INFO - ********************
+2025-05-25 20:39:58 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-b8944790-12e8-4656-b00a-c10c13f8e54a', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer, tech_enthusiast\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world\n"""\n\nAnd these sample posts:\n"""\nVisited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:39:58 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:39:58 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:39:58 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x106d6f050>
+2025-05-25 20:39:58 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10fa128d0> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:39:58 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10e8be050>
+2025-05-25 20:39:58 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:39:58 - DEBUG - send_request_headers.complete
+2025-05-25 20:39:58 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:39:58 - DEBUG - send_request_body.complete
+2025-05-25 20:39:58 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:39:59 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:39:59 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'784'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'787'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199625'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'112ms'), (b'x-request-id', b'req_71fee9f8c0e72fd5fffb99c36c3fe931'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=UMK.vS8jbCzwepxLZyio5V9HBTny_ypcZYy7aKr.e3Q-1748198399-1.0.1.1-PdfTGTdVbos_LQEQI1qzhhZ4JMbfe0Zl5pGX5ABIXpkp6H6iGbDhDMCGyV0.Dk8OBOHlr6HCNLog80zVw.U5QUroYNYtLRc72FT_dKL886g; path=/; expires=Sun, 25-May-25 19:09:59 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=vMYDiwFq0EE7gDArzNYCpBWwIIgRKtRjjpwUKoiFplQ-1748198399542-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'945728975b0bc4ec-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:39:59 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:39:59 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:39:59 - DEBUG - receive_response_body.complete
+2025-05-25 20:39:59 - DEBUG - response_closed.started
+2025-05-25 20:39:59 - DEBUG - response_closed.complete
+2025-05-25 20:39:59 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:39:59 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '784'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '787'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199625'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '112ms'), ('x-request-id', 'req_71fee9f8c0e72fd5fffb99c36c3fe931'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=UMK.vS8jbCzwepxLZyio5V9HBTny_ypcZYy7aKr.e3Q-1748198399-1.0.1.1-PdfTGTdVbos_LQEQI1qzhhZ4JMbfe0Zl5pGX5ABIXpkp6H6iGbDhDMCGyV0.Dk8OBOHlr6HCNLog80zVw.U5QUroYNYtLRc72FT_dKL886g; path=/; expires=Sun, 25-May-25 19:09:59 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=vMYDiwFq0EE7gDArzNYCpBWwIIgRKtRjjpwUKoiFplQ-1748198399542-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '945728975b0bc4ec-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:39:59 - DEBUG - request_id: req_71fee9f8c0e72fd5fffb99c36c3fe931
+2025-05-25 20:39:59 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:39:59 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places and sharing your experiences with others. Your bio and posts suggest a passion for travel, adventure, and discovering hidden gems around the world. Your vlog on Maldives and the 10 reasons to visit Black Forest show that you enjoy sharing travel guides and tips with your audience. Your focus on stunning photos and fun experiences aligns perfectly with the travel_adventurer persona.
+2025-05-25 20:39:59 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:39:59 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places and sharing your experiences with others. Your bio and posts suggest a passion for travel, adventure, and discovering hidden gems around the world. Your vlog on Maldives and the 10 reasons to visit Black Forest show that you enjoy sharing travel guides and tips with your audience. Your focus on stunning photos and fun experiences aligns perfectly with the travel_adventurer persona.
+2025-05-25 20:39:59 - INFO - ------------------------------------
+2025-05-25 20:39:59 - DEBUG - close.started
+2025-05-25 20:39:59 - DEBUG - close.complete
+2025-05-25 20:40:23 - INFO - ------------------------------------
+2025-05-25 20:40:23 - INFO - Query received - Bio: Adventurer, Traveler, Tech Enthusiast, Roaming the world, Posts: ['Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 20:40:23 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 74.1%
+2025-05-25 20:40:23 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 1, Keywords: ['tech'], Confidence: 37.0%
+2025-05-25 20:40:23 - INFO - ********************
+2025-05-25 20:40:23 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer, tech_enthusiast
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world
+"""
+
+And these sample posts:
+"""
+Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 20:40:23 - INFO - ********************
+2025-05-25 20:40:23 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-cc2ceedb-b9fa-49e4-9e16-6e12f1b27098', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer, tech_enthusiast\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world\n"""\n\nAnd these sample posts:\n"""\nVisited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 20:40:23 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 20:40:23 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 20:40:23 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x107b97e50>
+2025-05-25 20:40:23 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x106d3cc20> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 20:40:23 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10ffeabd0>
+2025-05-25 20:40:23 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 20:40:23 - DEBUG - send_request_headers.complete
+2025-05-25 20:40:23 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 20:40:23 - DEBUG - send_request_body.complete
+2025-05-25 20:40:23 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 20:40:24 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 18:40:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'787'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'789'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199625'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'112ms'), (b'x-request-id', b'req_83230ca03782a951bc1574ab0cbe40bc'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=k3zzZcY7_S995ir4tJTyIy2syTWHZ4TIt4VRoZ26WO8-1748198424-1.0.1.1-bWJY7PuLbODyLkNJjc_3SnmqPbYJZNxF8SOSKeddOshOutQaXcQd5lFq_pTsbt8bEm87K6sjqt.z4cI1Ue3t6q7Pw6eZ1nzrmkbQQo0qGBo; path=/; expires=Sun, 25-May-25 19:10:24 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=HIgrKJwc2GSoByWRmqQa5pZ2ihfDkSyLBlG1F0H4z_A-1748198424536-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'945729326a2e9bdd-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 20:40:24 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 20:40:24 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 20:40:24 - DEBUG - receive_response_body.complete
+2025-05-25 20:40:24 - DEBUG - response_closed.started
+2025-05-25 20:40:24 - DEBUG - response_closed.complete
+2025-05-25 20:40:24 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 18:40:24 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '787'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '789'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199625'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '112ms'), ('x-request-id', 'req_83230ca03782a951bc1574ab0cbe40bc'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=k3zzZcY7_S995ir4tJTyIy2syTWHZ4TIt4VRoZ26WO8-1748198424-1.0.1.1-bWJY7PuLbODyLkNJjc_3SnmqPbYJZNxF8SOSKeddOshOutQaXcQd5lFq_pTsbt8bEm87K6sjqt.z4cI1Ue3t6q7Pw6eZ1nzrmkbQQo0qGBo; path=/; expires=Sun, 25-May-25 19:10:24 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=HIgrKJwc2GSoByWRmqQa5pZ2ihfDkSyLBlG1F0H4z_A-1748198424536-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '945729326a2e9bdd-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 20:40:24 - DEBUG - request_id: req_83230ca03782a951bc1574ab0cbe40bc
+2025-05-25 20:40:24 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:40:24 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples and the Black Forest. Your vlog on Maldives also shows your passion for sharing travel guides and stunning photos from around the world. Your adventurous spirit and focus on hidden gems and adventure activities align perfectly with the travel_adventurer persona.
+2025-05-25 20:40:24 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 20:40:24 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples and the Black Forest. Your vlog on Maldives also shows your passion for sharing travel guides and stunning photos from around the world. Your adventurous spirit and focus on hidden gems and adventure activities align perfectly with the travel_adventurer persona.
+2025-05-25 20:40:24 - INFO - ------------------------------------
+2025-05-25 20:40:24 - DEBUG - close.started
+2025-05-25 20:40:24 - DEBUG - close.complete

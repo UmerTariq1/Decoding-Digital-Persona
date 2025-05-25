@@ -45,7 +45,14 @@ def show_intro_message(sleep_time=2):
 
 def display_personas_sidebar(personas):
     """Display all personas in the sidebar"""
-    st.sidebar.title("Available Personas")
+    # Create a container for the title and logo
+    st.sidebar.markdown("""
+        <div style='display: flex; align-items: center; gap: 10px;'>
+            <h1 style='margin: 0;'>Available Personas</h1>
+            <img src="data:image/jpeg;base64,{}" style='width: 240px; height: 240px; object-fit: contain;'>
+        </div>
+    """.format(get_image_base64("data/ref_imgs/logo.jpeg")), unsafe_allow_html=True)
+    
     st.sidebar.markdown("---")
     
     for persona in personas:
@@ -128,4 +135,66 @@ def display_persona_images(matching_persona):
                     </div>
                 """, unsafe_allow_html=True)
             except:
-                st.write(f"*{entity}*") 
+                st.write(f"*{entity}*")
+
+def display_main_ui():
+    """Display the main UI components"""
+    st.title("Digital Persona Predictor ✨")
+    st.write("Enter your short bio and a few sample social media posts. We'll predict your digital persona!")
+
+    # Initialize default values in session state if not exists
+    if 'default_bio' not in st.session_state:
+        st.session_state.default_bio = ""
+    if 'posts' not in st.session_state:
+        st.session_state.posts = [""]
+
+    # Input fields
+    bio = st.text_area("Your short bio:", value=st.session_state.default_bio, key="bio_input")
+    
+    st.subheader("Your Social Media Posts")
+    
+    # Display existing post inputs and store their values
+    post_values = []
+    for i in range(len(st.session_state.posts)):
+        col1, col2 = st.columns([0.9, 0.1])
+        with col1:
+            post_value = st.text_input(
+                f"Post {i+1}:",
+                value=st.session_state.posts[i],
+                key=f"post_{i}"
+            )
+            post_values.append(post_value)
+        with col2:
+            if st.button("🗑️", key=f"delete_{i}", help="Delete this post"):
+                # Remove the post at index i
+                st.session_state.posts.pop(i)
+                st.rerun()
+    
+    # Update session state with current post values
+    st.session_state.posts = post_values
+    
+    # Add Post button
+    if st.button("➕ Add Another Post"):
+        st.session_state.posts.append("")
+        st.rerun()
+
+    # Create columns for the buttons
+    col1, col2 = st.columns(2)
+
+    with col1:
+        predict_button = st.button("Predict Persona")
+
+    with col2:
+        fill_defaults = st.button("Fill Test Values", help="Click to fill in sample values for testing")
+
+    return bio, post_values, predict_button, fill_defaults
+
+def handle_default_values():
+    """Handle filling in default values"""
+    st.session_state.default_bio = "Adventurer, Traveler, Tech Enthusiast, Roaming the world"
+    st.session_state.posts = [
+        "Visited Naples today. Was fun.",
+        "Here are the 10 reasons why you should go to Black Forest",
+        "I just released a vlog on my stay in Maldives. Go check it out."
+    ]
+    st.rerun() 

@@ -4,8 +4,11 @@ from src.ui_components import (
     show_loading_animation,
     show_intro_message,
     display_personas_sidebar,
-    display_persona_images
+    display_persona_images,
+    display_main_ui,
+    handle_default_values
 )
+from src.image_utils import get_image_base64
 from src.custom_logger import get_logger
 
 # Initialize logger
@@ -68,7 +71,6 @@ def process_persona_prediction(bio, posts):
             
             if matching_persona:
                 st.markdown("<hr>", unsafe_allow_html=True)
-
                 display_persona_images(matching_persona)
         else:
             st.info("GPT could not confidently select a persona.")
@@ -78,6 +80,15 @@ def process_persona_prediction(bio, posts):
 
 def main():
     st.set_page_config(page_title="Digital Persona Predictor", page_icon="✨")
+    
+    # Add custom CSS for vertical alignment
+    st.markdown("""
+        <style>
+        div[data-testid="stButton"] button {
+            margin-top: 30px;  /* Adjust this value to align with text input */
+        }
+        </style>
+    """, unsafe_allow_html=True)
     
     # Initialize session state for intro message
     if 'intro_shown' not in st.session_state:
@@ -92,59 +103,16 @@ def main():
     # Display personas in sidebar
     display_personas_sidebar(PERSONAS)
     
-    st.title("Digital Persona Predictor ✨")
-    st.write("Enter your short bio and a few sample social media posts. We'll predict your digital persona!")
-
-    # Initialize session state for default values
-    if 'bio' not in st.session_state:
-        st.session_state.bio = ""
-    if 'posts' not in st.session_state:
-        st.session_state.posts = [""]  
-    if 'post_count' not in st.session_state:
-        st.session_state.post_count = 1
-
-    # Input fields with unique keys
-    bio = st.text_area("Your short bio:", value=st.session_state.bio, key="bio_input")
+    # Display main UI and get user inputs
+    bio, post_values, predict_button, fill_defaults = display_main_ui()
     
-    st.subheader("Your Social Media Posts")
-    
-    # Display existing post inputs
-    for i in range(len(st.session_state.posts)):
-        st.text_input(
-            f"Post {i+1}:",
-            value=st.session_state.posts[i],
-            key=f"post_{i}"
-        )
-    
-    # Add Post button
-    if st.button("➕ Add Another Post"):
-        st.session_state.posts.append("")
-        st.session_state.post_count += 1
-        st.rerun()
-
-    # Create columns for the buttons
-    col1, col2 = st.columns(2)
-
-    with col1:
-        predict_button = st.button("Predict Persona")
-
-    with col2:
-        fill_defaults = st.button("Fill Test Values", help="Click to fill in sample values for testing")
-
     # Handle button clicks
     if fill_defaults:
-        st.session_state.bio = "Adventurer, Traveler, Tech Enthusiast, Roaming the world"
-        st.session_state.posts = [
-            "Visited Naples today. Was fun.",
-            "Here are the 10 reasons why you should go to Black Forest",
-            "I just released a vlog on my stay in Maldives. Go check it out."
-        ]
-        st.session_state.post_count = 3
-        st.rerun()
-
+        handle_default_values()
+    
     if predict_button:
         # Collect all non-empty posts
-        valid_posts = [post for post in st.session_state.posts if post.strip()]
+        valid_posts = [post for post in post_values if post.strip()]
         
         if not bio.strip() or not valid_posts:
             st.warning("Please fill in both the bio and at least one post.")
