@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.so
+1export
 
 # Virtual Environment
 venv/

@@ -4,26 +4,27 @@ import time
 
 def show_loading_animation():
     """Show an animated progress bar with fun messages"""
-    progress_bar = st.progress(0)
-    status_text = st.empty()
-    
-    # Fun loading messages
-    messages = [
-        "Scanning your digital footprint...",
-        "Analyzing your vibe...",
-        "Decoding your persona...",
-        "Almost there..."
-    ]
-    
-    # Animate progress bar with messages
-    for i, message in enumerate(messages):
-        progress = (i + 1) / len(messages)
-        progress_bar.progress(progress)
-        status_text.text(message)
-        time.sleep(0.5)  # just for the show off effect
-    
-    progress_bar.empty()
-    status_text.empty()
+    with st.spinner("Analyzing your digital persona..."):
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+        
+        # Fun loading messages
+        messages = [
+            "Scanning your digital footprint...",
+            "Analyzing your vibe...",
+            "Decoding your persona...",
+            "Almost there..."
+        ]
+        
+        # Animate progress bar with messages
+        for i, message in enumerate(messages):
+            progress = (i + 1) / len(messages)
+            progress_bar.progress(progress)
+            status_text.text(message)
+            time.sleep(0.7)
+        
+        progress_bar.empty()
+        status_text.empty()
 
 def show_intro_message(sleep_time=2):
     """Show the intro message for 2 seconds"""
@@ -49,9 +50,9 @@ def display_personas_sidebar(personas):
     st.sidebar.markdown("""
         <div style='display: flex; align-items: center; gap: 10px;'>
             <h1 style='margin: 0;'>Available Personas</h1>
-            <img src="data:image/jpeg;base64,{}" style='width: 240px; height: 240px; object-fit: contain;'>
         </div>
     """.format(get_image_base64("data/ref_imgs/logo.jpeg")), unsafe_allow_html=True)
+            # <img src="data:image/jpeg;base64,{}" style='width: 240px; height: 240px; object-fit: contain;'>
     
     st.sidebar.markdown("---")
     
@@ -84,69 +85,73 @@ def display_persona_images(matching_persona):
     """, unsafe_allow_html=True)
     
     # Notable Figures
-    # st.markdown("#### Notable Figures you can get inspired by ")
-    col1, col2, col3 = st.columns(3)
     figures = matching_persona.get('notable_figures', [])
-    for i, figure in enumerate(figures):
-        col = [col1, col2, col3][i]
-        with col:
-            try:
-                image_path = f"data/ref_imgs/{figure}.jpeg"
-                st.markdown(f"""
-                    <div class="image-item">
-                        <img src="data:image/jpeg;base64,{get_image_base64(image_path)}" class="circular-image">
-                        <p>{figure}</p>
-                    </div>
-                """, unsafe_allow_html=True)
-            except:
-                st.write(f"*{figure}*")
+    if figures:
+        st.markdown("#### Notable Figures you can get inspired by")
+        cols = st.columns(3)
+        for i, figure in enumerate(figures):
+            col = cols[i % 3]
+            with col:
+                try:
+                    image_path = f"data/ref_imgs/{figure}.jpeg"
+                    st.markdown(f"""
+                        <div class="image-item">
+                            <img src="data:image/jpeg;base64,{get_image_base64(image_path)}" class="circular-image">
+                            <p>{figure}</p>
+                        </div>
+                    """, unsafe_allow_html=True)
+                except:
+                    st.write(f"*{figure}*")
     
     # Notable Influencers
-    st.markdown("#### Influencers you might relate to")
-    col1, col2, col3 = st.columns(3)
     influencers = matching_persona.get('notable_influencers', [])
-    for i, influencer in enumerate(influencers):
-        col = [col1, col2, col3][i]
-        with col:
-            try:
-                image_path = f"data/ref_imgs/{influencer}.jpeg"
-                st.markdown(f"""
-                    <div class="image-item">
-                        <img src="data:image/jpeg;base64,{get_image_base64(image_path)}" class="circular-image">
-                        <p>{influencer}</p>
-                    </div>
-                """, unsafe_allow_html=True)
-            except:
-                st.write(f"*{influencer}*")
+    if influencers:
+        st.markdown("#### Influencers you might relate to")
+        cols = st.columns(3)
+        for i, influencer in enumerate(influencers):
+            col = cols[i % 3]
+            with col:
+                try:
+                    image_path = f"data/ref_imgs/{influencer}.jpeg"
+                    st.markdown(f"""
+                        <div class="image-item">
+                            <img src="data:image/jpeg;base64,{get_image_base64(image_path)}" class="circular-image">
+                            <p>{influencer}</p>
+                        </div>
+                    """, unsafe_allow_html=True)
+                except:
+                    st.write(f"*{influencer}*")
     
     # Related Entities
-    st.markdown("#### Brands & Organizations related to you")
-    col1, col2, col3 = st.columns(3)
     entities = matching_persona.get('related_entities', [])
-    for i, entity in enumerate(entities):
-        col = [col1, col2, col3][i]
-        with col:
-            try:
-                image_path = f"data/ref_imgs/{entity}.jpeg"
-                st.markdown(f"""
-                    <div class="image-item">
-                        <img src="data:image/jpeg;base64,{get_image_base64(image_path)}" class="circular-image">
-                        <p>{entity}</p>
-                    </div>
-                """, unsafe_allow_html=True)
-            except:
-                st.write(f"*{entity}*")
+    if entities:
+        st.markdown("#### Brands & Organizations related to you")
+        cols = st.columns(3)
+        for i, entity in enumerate(entities):
+            col = cols[i % 3]
+            with col:
+                try:
+                    image_path = f"data/ref_imgs/{entity}.jpeg"
+                    st.markdown(f"""
+                        <div class="image-item">
+                            <img src="data:image/jpeg;base64,{get_image_base64(image_path)}" class="circular-image">
+                            <p>{entity}</p>
+                        </div>
+                    """, unsafe_allow_html=True)
+                except:
+                    st.write(f"*{entity}*")
 
 def display_main_ui():
     """Display the main UI components"""
-    st.title("Digital Persona Predictor ✨")
-    st.write("Enter your short bio and a few sample social media posts. We'll predict your digital persona!")
-
-    # Initialize default values in session state if not exists
-    if 'default_bio' not in st.session_state:
-        st.session_state.default_bio = ""
+    # Initialize session state for posts if not exists
     if 'posts' not in st.session_state:
         st.session_state.posts = [""]
+    if 'default_bio' not in st.session_state:
+        st.session_state.default_bio = ""
+
+    # Create a container for the title
+    st.title("Digital Persona Predictor ✨")
+    st.write("Enter your short bio and a few sample social media posts. We'll predict your digital persona!")
 
     # Input fields
     bio = st.text_area("Your short bio:", value=st.session_state.default_bio, key="bio_input")
@@ -166,7 +171,6 @@ def display_main_ui():
             post_values.append(post_value)
         with col2:
             if st.button("🗑️", key=f"delete_{i}", help="Delete this post"):
-                # Remove the post at index i
                 st.session_state.posts.pop(i)
                 st.rerun()
     
@@ -183,9 +187,10 @@ def display_main_ui():
 
     with col1:
         predict_button = st.button("Predict Persona")
-
+    
     with col2:
         fill_defaults = st.button("Fill Test Values", help="Click to fill in sample values for testing")
+    
 
     return bio, post_values, predict_button, fill_defaults
 
