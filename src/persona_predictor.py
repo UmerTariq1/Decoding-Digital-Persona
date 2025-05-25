@@ -70,13 +70,16 @@ def score_personas(personas: List[Dict], tokens: List[str], top_n: int = 3) -> L
 
         scores.append((persona, score, matched_keywords))
     
-    # Calculate total score for normalization
-    total_score = sum(score for _, score, _ in scores)
+    # Calculate total of positive scores for normalization
+    total_positive_score = sum(max(0, score) for _, score, _ in scores)
     
     # Add confidence percentage to each score tuple
     scores_with_confidence = []
     for persona, score, matched_keywords in scores:
-        confidence = (score / total_score * 100) if total_score > 0 else 0
+        # Ensure score is non-negative
+        normalized_score = max(0, score)
+        # Calculate confidence as percentage of total positive scores
+        confidence = (normalized_score / total_positive_score * 100) if total_positive_score > 0 else 0
         scores_with_confidence.append((persona, score, matched_keywords, confidence))
     
     # Sort by score in descending order

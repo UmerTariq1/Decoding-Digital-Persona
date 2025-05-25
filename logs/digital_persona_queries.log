@@ -1740,3 +1740,393 @@ Reasoning: You clearly love exploring new places and sharing your experiences wi
 2025-05-25 21:17:42 - INFO - ------------------------------------
 2025-05-25 21:17:42 - DEBUG - close.started
 2025-05-25 21:17:42 - DEBUG - close.complete
+2025-05-25 21:25:57 - INFO - ------------------------------------
+2025-05-25 21:25:57 - INFO - Query received - Bio: Adventurer, Traveler, Tech Enthusiast, Roaming the world, Posts: ['Visited Naples today. Was fun.', 'Here are the 10 reasons why you should go to Black Forest', 'I just released a vlog on my stay in Maldives. Go check it out.']
+2025-05-25 21:25:57 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['adventurer', 'traveler'], Confidence: 74.1%
+2025-05-25 21:25:57 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 1, Keywords: ['tech'], Confidence: 37.0%
+2025-05-25 21:25:57 - INFO - ********************
+2025-05-25 21:25:57 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer, tech_enthusiast
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+
+A user has provided this short bio:
+"""
+Adventurer, Traveler, Tech Enthusiast, Roaming the world
+"""
+
+And these sample posts:
+"""
+Visited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 21:25:57 - INFO - ********************
+2025-05-25 21:25:57 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-ce6e6274-7e8b-47f6-ae65-5d51f9e602cb', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer, tech_enthusiast\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\n\nA user has provided this short bio:\n"""\nAdventurer, Traveler, Tech Enthusiast, Roaming the world\n"""\n\nAnd these sample posts:\n"""\nVisited Naples today. Was fun. Here are the 10 reasons why you should go to Black Forest I just released a vlog on my stay in Maldives. Go check it out.\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 21:25:57 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 21:25:57 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 21:25:57 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x110058090>
+2025-05-25 21:25:57 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x11121f260> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 21:25:57 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x111776b10>
+2025-05-25 21:25:57 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 21:25:57 - DEBUG - send_request_headers.complete
+2025-05-25 21:25:57 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 21:25:57 - DEBUG - send_request_body.complete
+2025-05-25 21:25:57 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 21:25:59 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 19:25:58 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1040'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1043'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199625'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'112ms'), (b'x-request-id', b'req_5a3968f8961d86f5f4ab805ec83212c6'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=_GW0e3MKHmCfoSWWRMt7VJ9WkDtZXjeCx8x.dsGyZWo-1748201158-1.0.1.1-rjlsRsPHD_VJAK0jVGWzC8Bp3M4Gr_P_f1.VxgI1zvM1JX0kN3newgrsesa2mAXuhzPiiY0RbhOe68lk_tq4dZL5ZQbN6oaZBPp__7vN1Yc; path=/; expires=Sun, 25-May-25 19:55:58 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=DH50O_xVa8yifFqsIJ286mmVnaPy8WTCNmb7SWgs4Pk-1748201158918-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'94576bf29cded369-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 21:25:59 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 21:25:59 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 21:25:59 - DEBUG - receive_response_body.complete
+2025-05-25 21:25:59 - DEBUG - response_closed.started
+2025-05-25 21:25:59 - DEBUG - response_closed.complete
+2025-05-25 21:25:59 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 19:25:58 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1040'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1043'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199625'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '112ms'), ('x-request-id', 'req_5a3968f8961d86f5f4ab805ec83212c6'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=_GW0e3MKHmCfoSWWRMt7VJ9WkDtZXjeCx8x.dsGyZWo-1748201158-1.0.1.1-rjlsRsPHD_VJAK0jVGWzC8Bp3M4Gr_P_f1.VxgI1zvM1JX0kN3newgrsesa2mAXuhzPiiY0RbhOe68lk_tq4dZL5ZQbN6oaZBPp__7vN1Yc; path=/; expires=Sun, 25-May-25 19:55:58 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=DH50O_xVa8yifFqsIJ286mmVnaPy8WTCNmb7SWgs4Pk-1748201158918-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '94576bf29cded369-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 21:25:59 - DEBUG - request_id: req_5a3968f8961d86f5f4ab805ec83212c6
+2025-05-25 21:25:59 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 21:25:59 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples, the Black Forest, and Maldives. Your focus on sharing travel guides, tips, and vlogs from around the world aligns perfectly with the travel_adventurer persona. Your passion for uncovering hidden gems and adventure activities further solidifies this classification. While you do mention being a tech enthusiast, your primary content and sentiment revolve around travel and adventure, making the travel_adventurer persona the most fitting for you.
+2025-05-25 21:25:59 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 21:25:59 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences based on your bio and posts about visiting Naples, the Black Forest, and Maldives. Your focus on sharing travel guides, tips, and vlogs from around the world aligns perfectly with the travel_adventurer persona. Your passion for uncovering hidden gems and adventure activities further solidifies this classification. While you do mention being a tech enthusiast, your primary content and sentiment revolve around travel and adventure, making the travel_adventurer persona the most fitting for you.
+2025-05-25 21:25:59 - INFO - ------------------------------------
+2025-05-25 21:25:59 - DEBUG - close.started
+2025-05-25 21:25:59 - DEBUG - close.complete
+2025-05-25 21:28:10 - INFO - ------------------------------------
+2025-05-25 21:28:10 - INFO - Query received - Bio: The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic., Posts: ['Creating core memories..AND screensavers! ', 'IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!!', 'If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!']
+2025-05-25 21:28:10 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['explore', 'travel'], Confidence: 117.6%
+2025-05-25 21:28:10 - INFO - ********************
+2025-05-25 21:28:10 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+
+A user has provided this short bio:
+"""
+The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic.
+"""
+
+And these sample posts:
+"""
+Creating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 21:28:10 - INFO - ********************
+2025-05-25 21:28:10 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-28366ff2-fac3-4d71-b03e-fcc881f6ef00', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\n\nA user has provided this short bio:\n"""\nThe Bucket List Family\n✈️ Follow for kid friendly travel ideas!\n🌎 Family Travel Journalists National Geographic.\n"""\n\nAnd these sample posts:\n"""\nCreating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 21:28:10 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 21:28:10 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 21:28:10 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1060e5550>
+2025-05-25 21:28:10 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x1030836e0> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 21:28:10 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1117fb390>
+2025-05-25 21:28:10 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 21:28:10 - DEBUG - send_request_headers.complete
+2025-05-25 21:28:10 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 21:28:10 - DEBUG - send_request_body.complete
+2025-05-25 21:28:10 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 21:28:12 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 19:28:12 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1195'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1199'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199467'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'159ms'), (b'x-request-id', b'req_1a824d04ee1cfa9f76fd4b3e83c63532'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=gtA1C9rfQ_Bzf7CWaKuDaqMpiOoFU7cWrGzOuBEAZKo-1748201292-1.0.1.1-UNyztGGRSK6GmHEi_PUSPN0jCwUGog8YuGPCF3dQ2zZr2P6bP3izBDTtjbM3EU4wYmt_4hXrPiuGsFMy9JBKmNBe7B1pE5b4m67I8hluWz4; path=/; expires=Sun, 25-May-25 19:58:12 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=6dkNAFMjVjHXIdxbDwx5t_nbCFqVH7YpHOZYjK6hOhk-1748201292418-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'94576f349b301947-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 21:28:12 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 21:28:12 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 21:28:12 - DEBUG - receive_response_body.complete
+2025-05-25 21:28:12 - DEBUG - response_closed.started
+2025-05-25 21:28:12 - DEBUG - response_closed.complete
+2025-05-25 21:28:12 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 19:28:12 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1195'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1199'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199467'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '159ms'), ('x-request-id', 'req_1a824d04ee1cfa9f76fd4b3e83c63532'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=gtA1C9rfQ_Bzf7CWaKuDaqMpiOoFU7cWrGzOuBEAZKo-1748201292-1.0.1.1-UNyztGGRSK6GmHEi_PUSPN0jCwUGog8YuGPCF3dQ2zZr2P6bP3izBDTtjbM3EU4wYmt_4hXrPiuGsFMy9JBKmNBe7B1pE5b4m67I8hluWz4; path=/; expires=Sun, 25-May-25 19:58:12 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=6dkNAFMjVjHXIdxbDwx5t_nbCFqVH7YpHOZYjK6hOhk-1748201292418-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '94576f349b301947-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 21:28:12 - DEBUG - request_id: req_1a824d04ee1cfa9f76fd4b3e83c63532
+2025-05-25 21:28:12 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 21:28:12 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your bio mentioning kid-friendly travel ideas and being family travel journalists for National Geographic. Your posts about creating core memories, launching a book to inspire exploration, and inviting followers to join a group expedition in Reno Tahoe show your passion for sharing travel guides, tips, and stunning photos from around the world. Your focus on hidden gems, adventure activities, and inspiring others to explore aligns perfectly with the travel_adventurer persona.
+2025-05-25 21:28:12 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 21:28:12 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your bio mentioning kid-friendly travel ideas and being family travel journalists for National Geographic. Your posts about creating core memories, launching a book to inspire exploration, and inviting followers to join a group expedition in Reno Tahoe show your passion for sharing travel guides, tips, and stunning photos from around the world. Your focus on hidden gems, adventure activities, and inspiring others to explore aligns perfectly with the travel_adventurer persona.
+2025-05-25 21:28:12 - INFO - ------------------------------------
+2025-05-25 21:28:12 - DEBUG - close.started
+2025-05-25 21:28:12 - DEBUG - close.complete
+2025-05-25 22:12:31 - INFO - ------------------------------------
+2025-05-25 22:12:31 - INFO - Query received - Bio: The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic., Posts: ['Creating core memories..AND screensavers! ', 'IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!!', 'If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!']
+2025-05-25 22:12:31 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['explore', 'travel'], Confidence: 100.0%
+2025-05-25 22:12:31 - INFO - ********************
+2025-05-25 22:12:31 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+
+A user has provided this short bio:
+"""
+The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic.
+"""
+
+And these sample posts:
+"""
+Creating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 22:12:31 - INFO - ********************
+2025-05-25 22:12:31 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-590e8b56-0817-432f-b90d-22667e70ff7c', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\n\nA user has provided this short bio:\n"""\nThe Bucket List Family\n✈️ Follow for kid friendly travel ideas!\n🌎 Family Travel Journalists National Geographic.\n"""\n\nAnd these sample posts:\n"""\nCreating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 22:12:31 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 22:12:31 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 22:12:32 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x108b1f310>
+2025-05-25 22:12:32 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x108dea840> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 22:12:32 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1081d1e90>
+2025-05-25 22:12:32 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 22:12:32 - DEBUG - send_request_headers.complete
+2025-05-25 22:12:32 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 22:12:32 - DEBUG - send_request_body.complete
+2025-05-25 22:12:32 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 22:12:35 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 20:12:35 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1050'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1101'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199467'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'159ms'), (b'x-request-id', b'req_db607cee66511a9c0677a8269f9dae75'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=G0F7kbXoCi9vT62CuqwfkMu0LWj_0OUg6szM.X2IMOc-1748203955-1.0.1.1-lQ0ckg1mLmreo32JPxpGYLjezfILLFVCwyJsyBH_SQbRCmT7jqeM30QATffqvORhQaizpqfuNw.nFBdkiUY8q4fcbs59V9RlIyWY8fF4TL8; path=/; expires=Sun, 25-May-25 20:42:35 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=BFAHlvswbcYcmsOi0i.5Glot8B.VAL1Rj.BNXcXPyt0-1748203955454-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9457b02dc8acd213-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 22:12:35 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 22:12:35 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 22:12:35 - DEBUG - receive_response_body.complete
+2025-05-25 22:12:35 - DEBUG - response_closed.started
+2025-05-25 22:12:35 - DEBUG - response_closed.complete
+2025-05-25 22:12:35 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 20:12:35 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1050'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1101'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199467'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '159ms'), ('x-request-id', 'req_db607cee66511a9c0677a8269f9dae75'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=G0F7kbXoCi9vT62CuqwfkMu0LWj_0OUg6szM.X2IMOc-1748203955-1.0.1.1-lQ0ckg1mLmreo32JPxpGYLjezfILLFVCwyJsyBH_SQbRCmT7jqeM30QATffqvORhQaizpqfuNw.nFBdkiUY8q4fcbs59V9RlIyWY8fF4TL8; path=/; expires=Sun, 25-May-25 20:42:35 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=BFAHlvswbcYcmsOi0i.5Glot8B.VAL1Rj.BNXcXPyt0-1748203955454-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9457b02dc8acd213-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 22:12:35 - DEBUG - request_id: req_db607cee66511a9c0677a8269f9dae75
+2025-05-25 22:12:35 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:12:35 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your bio mentioning kid-friendly travel ideas and being family travel journalists for National Geographic. Your posts also reflect a sense of adventure and a passion for discovering hidden gems, just like a travel adventurer persona would. Additionally, your excitement for the upcoming book launch and the emphasis on inspiring young people to explore and be curious aligns perfectly with the values of a travel adventurer who shares travel guides and tips to inspire others to embark on their own adventures.
+2025-05-25 22:12:35 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:12:35 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your bio mentioning kid-friendly travel ideas and being family travel journalists for National Geographic. Your posts also reflect a sense of adventure and a passion for discovering hidden gems, just like a travel adventurer persona would. Additionally, your excitement for the upcoming book launch and the emphasis on inspiring young people to explore and be curious aligns perfectly with the values of a travel adventurer who shares travel guides and tips to inspire others to embark on their own adventures.
+2025-05-25 22:12:35 - INFO - ------------------------------------
+2025-05-25 22:12:35 - DEBUG - close.started
+2025-05-25 22:12:35 - DEBUG - close.complete
+2025-05-25 22:12:46 - INFO - ------------------------------------
+2025-05-25 22:12:46 - INFO - Query received - Bio: The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic.
+Techn gadgets, Posts: ['Creating core memories..AND screensavers! ', 'IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!!', 'If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!']
+2025-05-25 22:12:46 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 2, Keywords: ['gadget'], Confidence: 54.1%
+2025-05-25 22:12:46 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['explore', 'travel'], Confidence: 54.1%
+2025-05-25 22:12:46 - INFO - ********************
+2025-05-25 22:12:46 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+tech_enthusiast, travel_adventurer
+
+And their descriptions:
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+
+A user has provided this short bio:
+"""
+The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic.
+Techn gadgets
+"""
+
+And these sample posts:
+"""
+Creating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 22:12:46 - INFO - ********************
+2025-05-25 22:12:46 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-3cc7fbb8-4689-43c4-8ea6-7195766881bc', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntech_enthusiast, travel_adventurer\n\nAnd their descriptions:\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\n\nA user has provided this short bio:\n"""\nThe Bucket List Family\n✈️ Follow for kid friendly travel ideas!\n🌎 Family Travel Journalists National Geographic.\nTechn gadgets\n"""\n\nAnd these sample posts:\n"""\nCreating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 22:12:46 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 22:12:46 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 22:12:46 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x108d9d310>
+2025-05-25 22:12:46 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x107a34a70> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 22:12:46 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10b4f2010>
+2025-05-25 22:12:46 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 22:12:46 - DEBUG - send_request_headers.complete
+2025-05-25 22:12:46 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 22:12:46 - DEBUG - send_request_body.complete
+2025-05-25 22:12:46 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 22:12:47 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 20:12:47 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'811'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'816'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199406'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'178ms'), (b'x-request-id', b'req_33416bd8460f2678867718ca120158be'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=pPArJggHBgNo3NZILA0ZeKFQkvVAIh6Vlu2Ph7ipCxI-1748203967-1.0.1.1-nC_qg1EGnMqGeKxw212TLJWdR60yy95mTup8stluD2_ygI5.biCOZqmwlK4CHNJmL34yMjN.fbSbAn1.Ox5zI8wGgfnwVkRjksAEADos32U; path=/; expires=Sun, 25-May-25 20:42:47 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=D5Sk1k7.uD4DtHJTEIWpTt2c3o6eC3GM3Ts5CLsVBN8-1748203967804-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9457b088bc4ddc9d-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 22:12:47 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 22:12:47 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 22:12:47 - DEBUG - receive_response_body.complete
+2025-05-25 22:12:47 - DEBUG - response_closed.started
+2025-05-25 22:12:47 - DEBUG - response_closed.complete
+2025-05-25 22:12:47 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 20:12:47 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '811'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '816'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199406'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '178ms'), ('x-request-id', 'req_33416bd8460f2678867718ca120158be'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=pPArJggHBgNo3NZILA0ZeKFQkvVAIh6Vlu2Ph7ipCxI-1748203967-1.0.1.1-nC_qg1EGnMqGeKxw212TLJWdR60yy95mTup8stluD2_ygI5.biCOZqmwlK4CHNJmL34yMjN.fbSbAn1.Ox5zI8wGgfnwVkRjksAEADos32U; path=/; expires=Sun, 25-May-25 20:42:47 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=D5Sk1k7.uD4DtHJTEIWpTt2c3o6eC3GM3Ts5CLsVBN8-1748203967804-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9457b088bc4ddc9d-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 22:12:47 - DEBUG - request_id: req_33416bd8460f2678867718ca120158be
+2025-05-25 22:12:47 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:12:47 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences, as evidenced by your travel-focused bio and posts. Your passion for sharing travel guides, tips, and stunning photos aligns perfectly with the travel_adventurer persona. Additionally, your excitement for hidden gems and adventure activities further solidifies this classification. Keep inspiring others with your travel adventures!
+2025-05-25 22:12:47 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:12:47 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences, as evidenced by your travel-focused bio and posts. Your passion for sharing travel guides, tips, and stunning photos aligns perfectly with the travel_adventurer persona. Additionally, your excitement for hidden gems and adventure activities further solidifies this classification. Keep inspiring others with your travel adventures!
+2025-05-25 22:12:47 - INFO - ------------------------------------
+2025-05-25 22:12:47 - DEBUG - close.started
+2025-05-25 22:12:47 - DEBUG - close.complete
+2025-05-25 22:14:10 - INFO - ------------------------------------
+2025-05-25 22:14:10 - INFO - Query received - Bio: The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic.
+Techn gadgets, Posts: ['Creating core memories..AND screensavers! ', 'IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!!', 'If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!']
+2025-05-25 22:14:10 - INFO - Rule-based match - Persona: Tech Enthusiast 🤖, Score: 2, Keywords: ['gadget'], Confidence: 50.0%
+2025-05-25 22:14:10 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['explore', 'travel'], Confidence: 50.0%
+2025-05-25 22:14:10 - INFO - ********************
+2025-05-25 22:14:10 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+tech_enthusiast, travel_adventurer
+
+And their descriptions:
+tech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+
+A user has provided this short bio:
+"""
+The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic.
+Techn gadgets
+"""
+
+And these sample posts:
+"""
+Creating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 22:14:10 - INFO - ********************
+2025-05-25 22:14:11 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-68706804-10dc-4206-85cd-9160f6d67624', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntech_enthusiast, travel_adventurer\n\nAnd their descriptions:\ntech_enthusiast: Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums.\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\n\nA user has provided this short bio:\n"""\nThe Bucket List Family\n✈️ Follow for kid friendly travel ideas!\n🌎 Family Travel Journalists National Geographic.\nTechn gadgets\n"""\n\nAnd these sample posts:\n"""\nCreating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 22:14:11 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 22:14:11 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 22:14:11 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1079b3610>
+2025-05-25 22:14:11 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x108d0ec30> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 22:14:11 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x107427a10>
+2025-05-25 22:14:11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 22:14:11 - DEBUG - send_request_headers.complete
+2025-05-25 22:14:11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 22:14:11 - DEBUG - send_request_body.complete
+2025-05-25 22:14:11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 22:14:12 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 20:14:12 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'878'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'880'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199406'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'178ms'), (b'x-request-id', b'req_053ff3fb6a08e06e57e48089aee968c5'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=UpHhPpnqAWy.YPUCnCT_kf66DJ3X4zkm.C_12dV.KIo-1748204052-1.0.1.1-r.FpF.oYdS1biNRaKOJKGWMk0LytyjxbtZi8u3wz43l_CjtlFQDuKBYO.tfIiKIaq0HpO6AFeQk8QNqwY2OSUXQkxqwahagDZSKCtTc3mG0; path=/; expires=Sun, 25-May-25 20:44:12 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=vHMtdTbHjxPb4R8AKxoU_MoFxnDr5ybsSQIQbFQhnos-1748204052410-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9457b2982977371b-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 22:14:12 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 22:14:12 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 22:14:12 - DEBUG - receive_response_body.complete
+2025-05-25 22:14:12 - DEBUG - response_closed.started
+2025-05-25 22:14:12 - DEBUG - response_closed.complete
+2025-05-25 22:14:12 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 20:14:12 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '878'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '880'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199406'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '178ms'), ('x-request-id', 'req_053ff3fb6a08e06e57e48089aee968c5'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=UpHhPpnqAWy.YPUCnCT_kf66DJ3X4zkm.C_12dV.KIo-1748204052-1.0.1.1-r.FpF.oYdS1biNRaKOJKGWMk0LytyjxbtZi8u3wz43l_CjtlFQDuKBYO.tfIiKIaq0HpO6AFeQk8QNqwY2OSUXQkxqwahagDZSKCtTc3mG0; path=/; expires=Sun, 25-May-25 20:44:12 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=vHMtdTbHjxPb4R8AKxoU_MoFxnDr5ybsSQIQbFQhnos-1748204052410-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9457b2982977371b-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 22:14:12 - DEBUG - request_id: req_053ff3fb6a08e06e57e48089aee968c5
+2025-05-25 22:14:12 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:14:12 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your posts about creating core memories, sharing stunning photos from your travels, and inviting others to join you on group expeditions. Your focus on family-friendly travel ideas and inspiring young people to explore aligns perfectly with the travel_adventurer persona, which is all about sharing travel guides, tips, and hidden gems from around the world. Your passion for adventure activities and discovering new experiences makes you a great fit for this persona.
+2025-05-25 22:14:12 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:14:12 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your posts about creating core memories, sharing stunning photos from your travels, and inviting others to join you on group expeditions. Your focus on family-friendly travel ideas and inspiring young people to explore aligns perfectly with the travel_adventurer persona, which is all about sharing travel guides, tips, and hidden gems from around the world. Your passion for adventure activities and discovering new experiences makes you a great fit for this persona.
+2025-05-25 22:14:12 - INFO - ------------------------------------
+2025-05-25 22:14:12 - DEBUG - close.started
+2025-05-25 22:14:12 - DEBUG - close.complete
+2025-05-25 22:15:15 - INFO - ------------------------------------
+2025-05-25 22:15:15 - INFO - Query received - Bio: The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic., Posts: ['Creating core memories..AND screensavers! ', 'IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!!', 'If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!']
+2025-05-25 22:15:16 - INFO - Rule-based match - Persona: Travel Adventurer 🌍, Score: 2, Keywords: ['explore', 'travel'], Confidence: 100.0%
+2025-05-25 22:15:16 - INFO - ********************
+2025-05-25 22:15:16 - INFO - GPT Prompt : You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+travel_adventurer
+
+And their descriptions:
+travel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.
+
+A user has provided this short bio:
+"""
+The Bucket List Family
+✈️ Follow for kid friendly travel ideas!
+🌎 Family Travel Journalists National Geographic.
+"""
+
+And these sample posts:
+"""
+Creating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>
+
+2025-05-25 22:15:16 - INFO - ********************
+2025-05-25 22:15:16 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-8f44a456-6003-4948-b8f6-56ed92b19478', 'json_data': {'messages': [{'role': 'user', 'content': 'You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:\n\ntravel_adventurer\n\nAnd their descriptions:\ntravel_adventurer: Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities.\n\nA user has provided this short bio:\n"""\nThe Bucket List Family\n✈️ Follow for kid friendly travel ideas!\n🌎 Family Travel Journalists National Geographic.\n"""\n\nAnd these sample posts:\n"""\nCreating core memories..AND screensavers!  IMPORTANT NOTE : if you’re ever on a 23 day voyage to Antarctica and you see a “dirty iceberg” STOP FOR A CLOSER LOOK!! 😍😍😍 Also, another important tip..;) Our kids book launches in just 3 days!! 😱 Not gonna lie I’m actually sooo nervous. Just so much hard work and heart has gone into this book that will hopefully inspire young people and families around the world to explore, be curious, and love their FAMILY! Please mark your calendars and consider paying it forward or gifting this book to a family member or friend. ❤️ Today in our Instagram stories we are going to do a Q&A if you have any questions about the launch coming in just 3 DAYS!! If you listen carefully, can you hear her gulp underwater?? 💙 The water in @renotahoe is as clean as it looks! We’re excited to return this June for a group expedition! You in? Save the dates : June 5-8. More details coming SOON!\n"""\n\nYour tasks:\n1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.\n2. Provide a detailed and engaging explanation for your choice of persona.\n3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.\n   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”\n\nRespond only in this format:\nPersona: <persona_name>  \nReasoning: <your explanation>\n'}], 'model': 'gpt-3.5-turbo', 'max_tokens': 256, 'temperature': 0.3}}
+2025-05-25 22:15:16 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-05-25 22:15:16 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-05-25 22:15:16 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10ac8f990>
+2025-05-25 22:15:16 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x102c830b0> server_hostname='api.openai.com' timeout=5.0
+2025-05-25 22:15:16 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10ac8fe50>
+2025-05-25 22:15:16 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-05-25 22:15:16 - DEBUG - send_request_headers.complete
+2025-05-25 22:15:16 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-05-25 22:15:16 - DEBUG - send_request_body.complete
+2025-05-25 22:15:16 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-05-25 22:15:17 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 25 May 2025 20:15:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-1zbytwguy9ryk8s0zybeqzph'), (b'openai-processing-ms', b'1113'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'1117'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199467'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'159ms'), (b'x-request-id', b'req_547babfc603ed083675370227c6b217f'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=JhnbVbJztKUgnN4heN9pgTM65N0dMtrUgMXNX40HYjw-1748204117-1.0.1.1-DIGBmgo4O6bNKwgmuY_W9iY9lkOQ6OW2EVM9_P8IKPyxLrgi_D8yF3ijI4IYzpnhFwOPylHO6nrGWXz31QosNu6qfUl1FCBr3imlJaMzadI; path=/; expires=Sun, 25-May-25 20:45:17 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=2VkQIeIHQIOCvnvFo99E8ojChe_bpKLjYy_8DnlG7vA-1748204117610-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9457b42dbeb72c6f-FRA'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-05-25 22:15:17 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 22:15:17 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-05-25 22:15:17 - DEBUG - receive_response_body.complete
+2025-05-25 22:15:17 - DEBUG - response_closed.started
+2025-05-25 22:15:17 - DEBUG - response_closed.complete
+2025-05-25 22:15:17 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Sun, 25 May 2025 20:15:17 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-1zbytwguy9ryk8s0zybeqzph'), ('openai-processing-ms', '1113'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '1117'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199467'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '159ms'), ('x-request-id', 'req_547babfc603ed083675370227c6b217f'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=JhnbVbJztKUgnN4heN9pgTM65N0dMtrUgMXNX40HYjw-1748204117-1.0.1.1-DIGBmgo4O6bNKwgmuY_W9iY9lkOQ6OW2EVM9_P8IKPyxLrgi_D8yF3ijI4IYzpnhFwOPylHO6nrGWXz31QosNu6qfUl1FCBr3imlJaMzadI; path=/; expires=Sun, 25-May-25 20:45:17 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=2VkQIeIHQIOCvnvFo99E8ojChe_bpKLjYy_8DnlG7vA-1748204117610-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '9457b42dbeb72c6f-FRA'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-05-25 22:15:17 - DEBUG - request_id: req_547babfc603ed083675370227c6b217f
+2025-05-25 22:15:17 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:15:17 - INFO - Raw GPT Response:
+Persona: travel_adventurer  
+Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your posts about creating core memories, traveling to Antarctica, and promoting your kids' book that inspires exploration and curiosity. Your focus on family-friendly travel ideas aligns with the travel_adventurer persona, which shares travel guides, tips, and stunning photos from around the world. Additionally, your mention of returning to @renotahoe for a group expedition shows your interest in adventure activities and hidden gems, further solidifying your fit with the travel_adventurer persona. Your passion for travel and sharing unique experiences make you a perfect match for this persona.
+2025-05-25 22:15:17 - INFO - +++++++++++++++++++++++++++++++++++++
+2025-05-25 22:15:17 - INFO - GPT Analysis - Selected Persona: travel_adventurer, Reasoning: You clearly love exploring new places, cultures, and experiences, as seen in your posts about creating core memories, traveling to Antarctica, and promoting your kids' book that inspires exploration and curiosity. Your focus on family-friendly travel ideas aligns with the travel_adventurer persona, which shares travel guides, tips, and stunning photos from around the world. Additionally, your mention of returning to @renotahoe for a group expedition shows your interest in adventure activities and hidden gems, further solidifying your fit with the travel_adventurer persona. Your passion for travel and sharing unique experiences make you a perfect match for this persona.
+2025-05-25 22:15:17 - INFO - ------------------------------------
+2025-05-25 22:15:17 - DEBUG - close.started
+2025-05-25 22:15:17 - DEBUG - close.complete
