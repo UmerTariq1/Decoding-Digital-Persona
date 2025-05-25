@@ -2,6 +2,12 @@
 
 An intelligent tool that analyzes your digital presence to predict your online persona. By analyzing your bio and social media posts, it identifies patterns and characteristics that define your digital identity.
 
+## Access the Application
+
+You can access the Digital Persona Predictor application at: [https://decoding-persona.streamlit.app/](https://decoding-persona.streamlit.app/)
+
+> **Note**: The application is hosted on Streamlit's free tier. Please allow a few moments for the application to load as the server may need to spin up from an idle state.
+
 ## Features
 - **Smart Analysis**: Uses both rule-based matching and AI-powered classification
 - **Multi-Modal Input**: Analyzes both your bio and social media posts
