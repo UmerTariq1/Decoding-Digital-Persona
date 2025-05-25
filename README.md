@@ -17,13 +17,27 @@ An intelligent tool that analyzes your digital presence to predict your online p
 - Real-time persona scoring and classification
 
 ## How to Run
-1. Install requirements:
+1. Create and activate a virtual environment:
+   ```bash
+   python3.11 -m venv venv
+   source venv/bin/activate
    ```
+
+2. Install requirements:
+   ```bash
+   pip install --upgrade pip
    pip install -r requirements.txt
+   python -m spacy download en_core_web_sm
    ```
-2. Start the app:
-   ```
+
+3. Start the app:
+   ```bash
    streamlit run app.py
+   ```
+
+4. To deactivate the virtual environment when done:
+   ```bash
+   deactivate
    ```
 
 ## Project Structure
