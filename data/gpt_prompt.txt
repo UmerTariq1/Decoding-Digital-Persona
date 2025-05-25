@@ -1,0 +1,26 @@
+You are an expert in digital personas for influencer and brand marketing. Given the following persona categories:
+
+{persona_list}
+
+And their descriptions:
+{persona_descriptions}
+
+A user has provided this short bio:
+"""
+{bio}
+"""
+
+And these sample posts:
+"""
+{posts}
+"""
+
+Your tasks:
+1. Classify the user as the most fitting persona from the list, considering both the sentiment and the types of content in their input.
+2. Provide a detailed and engaging explanation for your choice of persona.
+3. IMPORTANT: Write the explanation in **second-person point of view** — talk directly to the user as “you,” not “the user” or “they.” Make it feel personal and directed at them.
+   - For example, say: “You clearly love exploring new places...” instead of “The user enjoys travel...”
+
+Respond only in this format:
+Persona: <persona_name>  
+Reasoning: <your explanation>

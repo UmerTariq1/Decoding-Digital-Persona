@@ -1,0 +1,244 @@
+- persona_name: tech_enthusiast
+  description: Loves the latest gadgets, apps, and tech trends. Always first to try
+    new digital tools. Enjoys sharing reviews and tips about new technology, and is
+    often seen at tech events or online forums.
+  display_name: "Tech Enthusiast \U0001F916"
+  icon: "\U0001F916"
+  keywords:
+  - ai
+  - api
+  - app
+  - automation
+  - beta-feature
+  - coder
+  - developer
+  - devlog
+  - engineer
+  - framework
+  - gadget
+  - hackathon
+  - innovation
+  - maker
+  - open-source
+  - prompt-engineering
+  - review
+  - reviewer
+  - setup
+  - startup
+  - tech
+  - unboxing
+  negative_keywords:
+  - meditation
+  - makeup
+  - yoga
+  - haul
+  - detox
+  - recipe
+  - meal prep
+  - wellness
+  - spa day
+  notable_figures:
+  - Elon Musk
+  - Mark Zuckerberg
+  - Sam Altman
+  notable_influencers:
+  - Marques Brownlee
+  - Linus Tech Tips
+  - Justine Ezarik (iJustine)
+  related_entities:
+  - Apple
+  - Google
+  - Samsung
+- persona_name: wellness_guru
+  description: Passionate about food, restaurants, and sharing culinary adventures.
+    Loves discovering new cuisines, reviewing eateries, and posting mouth-watering
+    food photos.
+  display_name: "Foodie Explorer \U0001F363"
+  icon: "\U0001F363"
+  keywords:
+  - baking
+  - brunch
+  - chef
+  - coach
+  - comfort-food
+  - craving
+  - cuisine
+  - delicious
+  - dine
+  - flavor
+  - food
+  - foodporn
+  - healer
+  - motivator
+  - recipe
+  - restaurant
+  - street-food
+  - taste
+  - trainer
+  - yogi
+  negative_keywords:
+  - meditation
+  - framework
+  - rep
+  - debug
+  - yoga
+  - pull request
+  - routine
+  - devlog
+  - coding
+  notable_figures:
+  - Gordon Ramsay
+  - Anthony Bourdain
+  - Clare Smyth
+  notable_influencers:
+  - Salt Bae
+  - Molly Baz
+  - Alvin Zhou
+  related_entities:
+  - Michelin Guide
+  - MasterChef
+  - Yelp
+- persona_name: wellness_guru
+  description: Focused on health, mindfulness, and inspiring others to live well.
+    Shares tips on fitness, meditation, and healthy living, often posting motivational
+    content.
+  display_name: "Wellness Guru \U0001F9D8"
+  icon: "\U0001F9D8"
+  keywords:
+  - affirmation
+  - balance
+  - coach
+  - detox
+  - fitness
+  - healer
+  - health
+  - meditation
+  - mental-health
+  - mindfulness
+  - motivator
+  - nutrition
+  - routine
+  - self-care
+  - trainer
+  - wellness
+  - workout
+  - yoga
+  - yogi
+  - zen
+  negative_keywords:
+  - fast food
+  - tech
+  - travel
+  - open source
+  - gaming
+  - binge watch
+  - tech review
+  - pizza
+  - snack
+  notable_figures:
+  - Deepak Chopra
+  - Lucia magnani
+  - Jay Shetty
+  notable_influencers:
+  - Adriene Mishler (Yoga with Adriene)
+  - Chloe Ting
+  - Joe Wicks
+  related_entities:
+  - Headspace
+  - Calm
+  - Peloton
+- persona_name: fashion_trendsetter
+  description: Always ahead of the curve in style, this persona loves sharing outfit
+    inspiration, fashion hauls, and the latest trends. Frequently collaborates with
+    brands and posts about seasonal collections.
+  display_name: "Fashion Trendsetter \U0001F457"
+  icon: "\U0001F457"
+  keywords:
+  - aesthetic
+  - blogger
+  - chic
+  - closet
+  - collection
+  - designer
+  - fashion
+  - fashionista
+  - glam
+  - influencer
+  - lookbook
+  - model
+  - ootd
+  - outfit
+  - runway
+  - style
+  - stylist
+  - trend
+  - wardrobe
+  negative_keywords:
+  - backpropagation
+  - gym
+  - framework
+  - infra
+  - debug
+  - meal
+  - latency
+  - coding
+  notable_figures:
+  - Anna Wintour
+  - Rihanna
+  - Timothée Chalamet
+  notable_influencers:
+  - Chiara Ferragni
+  - Camila Coelho
+  - Aimee Song
+  related_entities:
+  - Vogue
+  - Gucci
+  - Zara
+- persona_name: travel_adventurer
+  description: Loves exploring new places, cultures, and experiences. Shares travel
+    guides, tips, and stunning photos from around the world. Often posts about hidden
+    gems and adventure activities.
+  display_name: "Travel Adventurer \U0001F30D"
+  icon: "\U0001F30D"
+  keywords:
+  - adventure
+  - adventurer
+  - backpack
+  - backpacker
+  - culture
+  - destination
+  - experience
+  - explore
+  - explorer
+  - gem
+  - guide
+  - journey
+  - nomad
+  - passport
+  - scenic
+  - sunset
+  - travel
+  - traveler
+  - trip
+  - wanderlust
+  negative_keywords:
+  - workflow
+  - inspo
+  - automation
+  - makeup
+  - API
+  - meal
+  - homebody
+  - data-pipeline
+  notable_figures:
+  - Eva zu Beck
+  - Rick Steves
+  - Nomadic Matt
+  notable_influencers:
+  - Drew Binsky
+  - The Bucket List Family
+  - Kara and Nate
+  related_entities:
+  - Lonely Planet
+  - Airbnb
+  - Tripadvisor

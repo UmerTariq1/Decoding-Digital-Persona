@@ -1,0 +1,105 @@
+- persona_name: tech_enthusiast
+  display_name: "Tech Enthusiast 🤖"
+  icon: "🤖"
+  description: "Loves the latest gadgets, apps, and tech trends. Always first to try new digital tools. Enjoys sharing reviews and tips about new technology, and is often seen at tech events or online forums."
+  keywords:
+    - tech
+    - gadget
+    - AI
+    - app
+    - innovation
+    - startup
+    - review
+    - coding
+  negative_keywords:
+    - cooking
+    - wellness
+  style_indicators:
+    - #TechLife
+    - #Innovation
+    - "latest app"
+    - "just launched"
+
+- persona_name: foodie_explorer
+  display_name: "Foodie Explorer 🍣"
+  icon: "🍣"
+  description: "Passionate about food, restaurants, and sharing culinary adventures. Loves discovering new cuisines, reviewing eateries, and posting mouth-watering food photos."
+  keywords:
+    - food
+    - restaurant
+    - recipe
+    - taste
+    - chef
+    - cuisine
+    - delicious
+    - flavor
+  negative_keywords:
+    - gadget
+    - fitness
+  style_indicators:
+    - #Foodie
+    - #Yum
+    - "must try"
+    - "hidden gem"
+
+- persona_name: wellness_guru
+  display_name: "Wellness Guru 🧘"
+  icon: "🧘"
+  description: "Focused on health, mindfulness, and inspiring others to live well. Shares tips on fitness, meditation, and healthy living, often posting motivational content."
+  keywords:
+    - wellness
+    - fitness
+    - health
+    - yoga
+    - meditation
+    - mindfulness
+    - workout
+    - nutrition
+  negative_keywords:
+    - tech
+    - fast food
+  style_indicators:
+    - #Wellness
+    - #Mindful
+    - "daily practice"
+    - "stay healthy"
+
+- persona_name: fashion_trendsetter
+  display_name: "Fashion Trendsetter 👗"
+  icon: "👗"
+  description: "Always ahead of the curve in style, this persona loves sharing outfit inspiration, fashion hauls, and the latest trends. Frequently collaborates with brands and posts about seasonal collections."
+  keywords:
+    - fashion
+    - style
+    - outfit
+    - trend
+    - collection
+    - designer
+    - lookbook
+    - chic
+  negative_keywords:
+    - tech
+    - recipe
+  style_indicators:
+    - "new collection"
+    - "styled by"
+
+- persona_name: travel_adventurer
+  display_name: "Travel Adventurer 🌍"
+  icon: "🌍"
+  description: "Loves exploring new places, cultures, and experiences. Shares travel guides, tips, and stunning photos from around the world. Often posts about hidden gems and adventure activities."
+  keywords:
+    - travel
+    - adventure
+    - explore
+    - trip
+    - journey
+    - destination
+    - wanderlust
+    - guide
+  negative_keywords:
+    - tech
+    - meditation
+  style_indicators:
+    - "hidden gem"
+    - "bucket list" 

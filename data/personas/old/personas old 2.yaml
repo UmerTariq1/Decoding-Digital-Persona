@@ -1,0 +1,156 @@
+- persona_name: tech_enthusiast
+  description: Loves the latest gadgets, apps, and tech trends. Always first to try
+    new digital tools. Enjoys sharing reviews and tips about new technology, and is
+    often seen at tech events or online forums.
+  display_name: Tech Enthusiast 🤖
+  icon: 🤖
+  keywords:
+  - tech
+  - gadget
+  - AI
+  - app
+  - innovation
+  - startup
+  - review
+  - coding
+  negative_keywords:
+  - cooking
+  - wellness
+  notable_figures:
+  - Elon Musk
+  - Mark Zuckerberg
+  - Sam Altman
+  notable_influencers:
+  - Marques Brownlee
+  - Linus Tech Tips
+  - Justine Ezarik (iJustine)
+  related_entities:
+  - Apple
+  - Google
+  - Samsung
+- persona_name: foodie_explorer
+  description: Passionate about food, restaurants, and sharing culinary adventures.
+    Loves discovering new cuisines, reviewing eateries, and posting mouth-watering
+    food photos.
+  display_name: Foodie Explorer 🍣
+  icon: 🍣
+  keywords:
+  - food
+  - restaurant
+  - recipe
+  - taste
+  - chef
+  - cuisine
+  - delicious
+  - flavor
+  negative_keywords:
+  - gadget
+  - fitness
+  notable_figures:
+  - Gordon Ramsay
+  - Anthony Bourdain
+  - Clare Smyth
+  notable_influencers:
+  - Salt Bae
+  - Molly Baz
+  - Alvin Zhou
+  related_entities:
+  - Michelin Guide
+  - MasterChef
+  - Yelp
+- persona_name: wellness_guru
+  description: Focused on health, mindfulness, and inspiring others to live well.
+    Shares tips on fitness, meditation, and healthy living, often posting motivational
+    content.
+  display_name: Wellness Guru 🧘
+  icon: 🧘
+  keywords:
+  - wellness
+  - fitness
+  - health
+  - yoga
+  - meditation
+  - mindfulness
+  - workout
+  - nutrition
+  negative_keywords:
+  - tech
+  - fast food
+  notable_figures:
+  - Deepak Chopra
+  - Lucia magnani
+  - Jay Shetty
+  notable_influencers:
+  - Adriene Mishler (Yoga with Adriene)
+  - Chloe Ting
+  - Joe Wicks
+  related_entities:
+  - Headspace
+  - Calm
+  - Peloton
+
+- persona_name: fashion_trendsetter
+  description: Always ahead of the curve in style, this persona loves sharing outfit
+    inspiration, fashion hauls, and the latest trends. Frequently collaborates with
+    brands and posts about seasonal collections.
+  display_name: Fashion Trendsetter 👗
+  icon: 👗
+  keywords:
+  - fashion
+  - style
+  - outfit
+  - trend
+  - collection
+  - designer
+  - lookbook
+  - chic
+  negative_keywords:
+  - tech
+  - recipe
+  notable_figures:
+  - Anna Wintour
+  - Rihanna
+  - Timothée Chalamet
+  notable_influencers:
+  - Chiara Ferragni
+  - Camila Coelho
+  - Aimee Song
+  related_entities:
+  - Vogue
+  - Gucci
+  - Zara
+- persona_name: travel_adventurer
+  description: Loves exploring new places, cultures, and experiences. Shares travel
+    guides, tips, and stunning photos from around the world. Often posts about hidden
+    gems and adventure activities.
+  display_name: Travel Adventurer 🌍
+  icon: 🌍
+  keywords:
+  - travel
+  - traveler 
+  - adventure
+  - adventurer
+  - explore
+  - trip
+  - journey
+  - destination
+  - wanderlust
+  - guide
+  - backpack
+  - backpacking
+  - backpacker
+  negative_keywords:
+  - tech
+  - meditation
+  notable_figures:
+  - Eva zu Beck
+  - Rick Steves
+  - Nomadic Matt
+  notable_influencers:
+  - Drew Binsky
+  - The Bucket List Family
+  - Kara and Nate
+  related_entities:
+  - Lonely Planet
+  - Airbnb
+  - Tripadvisor

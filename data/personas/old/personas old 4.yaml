@@ -1,0 +1,161 @@
+- persona_name: tech_enthusiast
+  description: Loves the latest gadgets, apps, and tech trends. Always first to try
+    new digital tools. Enjoys sharing reviews and tips about new technology, and is
+    often seen at tech events or online forums.
+  display_name: Tech Enthusiast 🤖
+  icon: 🤖
+  keywords:
+  - beta-feature
+  - automation
+  - devlog
+  - app
+  - tech
+  - setup
+  - framework
+  - prompt-engineering
+  - startup
+  - review
+  - unboxing
+  - api
+  - hackathon
+  - innovation
+  - gadget
+  - ai
+  - open-source
+  negative_keywords:
+  - meditation
+  - makeup
+  - yoga
+  - haul
+  - detox
+  - recipe
+  - meal prep
+  - wellness
+  - spa day
+- persona_name: wellness_guru
+  description: Passionate about food, restaurants, and sharing culinary adventures.
+    Loves discovering new cuisines, reviewing eateries, and posting mouth-watering
+    food photos.
+  display_name: Foodie Explorer 🍣
+  icon: 🍣
+  keywords:
+  - baking
+  - restaurant
+  - taste
+  - flavor
+  - delicious
+  - street-food
+  - food
+  - dine
+  - recipe
+  - brunch
+  - craving
+  - chef
+  - cuisine
+  - comfort-food
+  - foodporn
+  negative_keywords:
+  - meditation
+  - framework
+  - rep
+  - debug
+  - yoga
+  - pull request
+  - routine
+  - devlog
+  - coding
+- persona_name: wellness_guru
+  description: Focused on health, mindfulness, and inspiring others to live well.
+    Shares tips on fitness, meditation, and healthy living, often posting motivational
+    content.
+  display_name: Wellness Guru 🧘
+  icon: 🧘
+  keywords:
+  - meditation
+  - self-care
+  - affirmation
+  - mindfulness
+  - yoga
+  - balance
+  - zen
+  - nutrition
+  - workout
+  - detox
+  - routine
+  - wellness
+  - mental-health
+  - fitness
+  - health
+  negative_keywords:
+  - fast food
+  - tech
+  - travel
+  - open source
+  - gaming
+  - binge watch
+  - tech review
+  - pizza
+  - snack
+- persona_name: fashion_trendsetter
+  description: Always ahead of the curve in style, this persona loves sharing outfit
+    inspiration, fashion hauls, and the latest trends. Frequently collaborates with
+    brands and posts about seasonal collections.
+  display_name: Fashion Trendsetter 👗
+  icon: 👗
+  keywords:
+  - chic
+  - outfit
+  - closet
+  - aesthetic
+  - runway
+  - glam
+  - fashion
+  - lookbook
+  - style
+  - designer
+  - collection
+  - ootd
+  - wardrobe
+  - trend
+  negative_keywords:
+  - backpropagation
+  - gym
+  - framework
+  - infra
+  - debug
+  - meal
+  - latency
+  - coding
+- persona_name: travel_adventurer
+  description: Loves exploring new places, cultures, and experiences. Shares travel
+    guides, tips, and stunning photos from around the world. Often posts about hidden
+    gems and adventure activities.
+  display_name: Travel Adventurer 🌍
+  icon: 🌍
+  keywords:
+  - gem
+  - scenic
+  - sunset
+  - passport
+  - adventurer
+  - traveler
+  - travel
+  - destination
+  - culture
+  - backpack
+  - adventure
+  - explore
+  - trip
+  - wanderlust
+  - experience
+  - journey
+  - guide
+  negative_keywords:
+  - workflow
+  - inspo
+  - automation
+  - makeup
+  - API
+  - meal
+  - homebody
+  - data-pipeline
